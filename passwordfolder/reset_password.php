@@ -24,7 +24,7 @@ include 'emailsending.php';
 	 </div>
          
 	<div class="container">
-		<div class="contentbox">
+		<div class="contentbox2">
 			<div class="row">
 				<div class="col-sm-12 col-lg-12">
 					<br>
