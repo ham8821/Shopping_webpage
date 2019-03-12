@@ -1,0 +1,250 @@
+
+/*
+
+Color palette
+$color1: rgba(232, 241, 242, 1);
+$color2: rgba(252, 163, 17, 1);
+$color3: rgba(255, 140, 66, 1);
+$color4: rgba(240, 100, 73, 1);
+$color5: rgba(54, 56, 46, 1);
+
+$color1: rgba(93, 253, 203, 1);
+$color2: rgba(54, 85, 112, 1);
+$color3: rgba(255, 142, 114, 1);
+$color4: rgba(239, 148, 108, 1);
+$color5: rgba(196, 167, 125, 1);
+/*font-family: 'Poppins', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+*{box-sizing: border-box};
+
+html, body{
+    margin:0;
+    padding:0;
+    width:100%;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#bar{
+  background-color: rgba(0, 0,0 ,0);
+
+}
+#menu{
+ text-decoration: none;
+ font-size: 18px;
+ text-align: center;
+ margin: 10px auto;
+}
+.backimg{
+    width: 100%;
+    height: 550px;
+    position: absolute;
+    z-index: -1;
+    top:0;
+   
+}
+header{
+    width:100%;
+    height: 100vh;
+  
+}
+    .banner_text{
+        font:'Open Sans';
+        font-size: 70PX;
+        font-weight: 900;  
+        color:#1a1230;
+        line-height: 1.5em;
+        width: 100%;
+        position: absolute;
+        top: 140px;
+        text-align: center;
+        text-shadow: 2px 2px rgba(240, 100, 73, 1);
+    }
+ /*---------------------------------------------------------------------------------------------------------------*/
+ #searchbar{
+  position: absolute;
+  
+  font-family: 'Montserrat', sans-serif;
+ }
+ .tab {
+  overflow: hidden;
+  border: 1px solid rgba(252, 163, 17, 1);
+  border-radius: 15px;
+  background-color: rgba(252, 163, 17, 1);
+
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 25px;
+  transition: 0.3s;
+  font-size: 16px;
+
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 15px;
+}
+
+/* --------------------------------*/
+
+
+.tab .search-container {
+  float: left;
+}
+
+.tab input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.tab .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.tab .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .tab .search-container {
+    float: none;
+  }
+ .tab input[type=text], .tab .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .tab input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+
+/*-----------------------------------------------------------------------------------------*/
+/* Login form=------------------------*/
+
+
+.container{
+  height: 100%;
+  align-content: center;
+  }
+  #formbox{
+    max-width: 450px;
+    width:100%;
+    position: absolute;
+    left:35px;
+    top:410px;
+  }
+  .card{
+  height: 370px;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 430px;
+  background-color: rgba(0,0,0,0.3) !important;
+  float: left;
+  }
+  
+  .social_icon span{
+  font-size: 60px;
+  margin-left: 10px;
+  color: #FFC312;
+  font-family: 'Montserrat', sans-serif;
+  }
+  
+  .social_icon span:hover{
+  color: rgba(240, 100, 73, 1);
+  cursor: pointer;
+  }
+  
+  .card-header h3{
+  color: white;
+  }
+  
+  .social_icon{
+  position: absolute;
+  right: 20px;
+  top: -45px;
+  }
+  
+  .input-group-prepend span{
+  width: 50px;
+  background-color: #FFC312;
+  color: black;
+  border:0 !important;
+  }
+  
+  input:focus{
+  outline: 0 0 0 0  !important;
+  box-shadow: 0 0 0 0 !important;
+  
+  }
+  
+  .remember{
+  color: white;
+  }
+  
+  .remember input
+  {
+  width: 20px;
+  height: 20px;
+  margin-left: 15px;
+  margin-right: 5px;
+  }
+  
+  .login_btn{
+  color: black;
+  background-color: #FFC312;
+  width: 100px;
+  }
+  
+  .login_btn:hover{
+  color: black;
+  background-color: white;
+  }
+  
+  .links{
+  color: white;
+  }
+  
+  .links a{
+  margin-left: 4px;
+  }
+  #leftside{
+ max-width:100%;
+  }
+  #rightside{
+    max-width:100%;
+  }

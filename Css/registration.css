@@ -1,0 +1,119 @@
+html, body{
+    margin:0;
+    padding:0;
+    width:100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+img {
+  width: 100%;
+}
+.recordimage{
+position: absolute;
+top:10px;
+height: 570px;
+z-index: -1;
+}
+/* .photopart{
+  background-image: url("../images/record.jpg")
+} */
+.quote{
+    color:white;
+    /* position: absolute;
+    /* top: 220px;
+    left: 128px; */ 
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 2rem;
+    margin-top: 220px;
+    text-shadow:1px 1px #8BC34A;
+}
+form {
+  width: 90%;
+  height: 570px;
+  margin: 15px auto;
+  background: #efefef;
+  padding: 30px 110px 30px 110px;    padding: 30px 50px 30px 50px;
+  text-align: left;
+  -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+}
+label {
+  display: block;
+  position: relative;
+  margin: 20px 0px;
+}
+.input {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-top: 1.5vw;
+}
+
+.line-box {
+  position: relative;
+  width: 120%;
+  height: 2px;
+  background: #BCBCBC;
+  
+}
+
+.line {
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #8BC34A;
+  transition: ease .6s;
+  
+
+}
+
+.input:focus + .line-box .line {
+  width: 100%;
+}
+
+.label-txt {
+  position: absolute;
+  top: -1.6em;
+  padding: 10px;
+ width: 300px;
+  font-family: sans-serif;
+  font-size: 1.2vw;
+  letter-spacing: 1px;
+  color: rgb(120,120,120);
+  transition: ease .3s;
+  text-align: left;
+}
+
+.label-active {
+  top: -3em;
+}
+.submitbutton{
+  margin-top: 30px auto;
+  
+}
+button {
+  display: inline-block;
+  padding: 10px 24px;
+  margin: 40px auto !important;
+  text-align: center;
+  background: rgb(220,220,220);
+  font-weight: bold;
+  color: rgb(120,120,120);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: ease .3s;
+
+}
+
+button:hover {
+  background: #8BC34A;
+  color: #ffffff;
+}
+
