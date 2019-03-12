@@ -1,6 +1,20 @@
 <?php
-include 'emailsending.php';
+	include 'emailsending.php';
+	
+	if(isset($_POST["reset-password"])) {
+		$conn = mysqli_connect("localhost", "root", "", "sup");
+		$ser = $_POST["password"];
+	    $get= $_GET["name"];
+		$sql = "UPDATE user SET password = '$ser' WHERE email= '$get'";
+	    //echo md5($_POST["password"]);
+		//echo $ser;
+	    //echo $get;
+		$result = mysqli_query($conn,$sql);
+		$success_message = "Password is reset successfully.";
+		
+	}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,5 +1,5 @@
 <?php
-define("PROJECT_HOME","http://localhost/SDI2/passwordfolder");
+define("PROJECT_HOME","http://localhost/Shopping_webpage/passwordfolder");
 
 define("PORT", ""); // port number
 define("MAIL_USERNAME", "ham38538821@gmail.com"); // smtp usernmae
