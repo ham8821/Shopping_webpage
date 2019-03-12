@@ -126,7 +126,7 @@ if (password.length < 1 || password.length > 40) {
 
 }
 /*---------------------------------------password reset validation------------------------------------------------------------------------------*/
-function passwordreset(){
+/*function passwordreset(){
   var useremail= document.getElementById("useremail").value;
   var submitOK = "true";
   if (useremail.length < 1 || useremail.length > 40) {
@@ -142,7 +142,7 @@ function passwordreset(){
   }
 
 }
-
+*/
 
 
 function validate_forgot() {
@@ -154,5 +154,18 @@ function validate_forgot() {
 }
 
 /*---------------------------------------password reset validation------------------------------------------------------------------------------*/
-
+<script>
+function validate_password_reset() {
+	if((document.getElementById("password").value == "") && (document.getElementById("confirm_password").value == "")) {
+		document.getElementById("validation-message").innerHTML = "Please enter new password!"
+		return false;
+	}
+	if(document.getElementById("password").value  != document.getElementById("confirm_password").value) {
+		document.getElementById("validation-message").innerHTML = "Both password should be same!"
+		return false;
+	}
+	
+	return true;
+}
+</script>
 /*---------------------------------------password reset validation------------------------------------------------------------------------------*/

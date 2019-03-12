@@ -21,7 +21,7 @@ include 'emailsending.php';
 <body>
 	
      <div class="a">
-		
+	 </div>
          
 	<div class="container">
 		<div class="contentbox">
@@ -44,11 +44,22 @@ include 'emailsending.php';
 			<div class="row">
 				<div class="formbox col-sm-12 col-lg-12">
 					<form name="frmForgot" id="frmForgot" method="post" onSubmit="return validate_forgot();">
-					<div><label for="email">Email</label></div>
+					<?php if(!empty($success_message)) { ?>
+					<div class="success_message"><?php echo $success_message; ?></div>
+					<?php } ?>
+
+					<div id="validation-message">
+						<?php if(!empty($error_message)) { ?>
+					<?php echo $error_message; ?>
+					<?php } ?>
+					</div>
+
+
+					
 					<br>
-					<div><input type="text" name="user-email" id="user-email" class="input-field"></div>
+					<div><input type="text" name="user-email" id="user-email" value="Email Address" class="input-field"> </div>
 					<br>
-					<div><input type="submit" name="forgot-password" id="forgot-password" value="Submit" class="form-submit-button"></div>
+					<div><input type="submit" name="forgot-password" id="forgot-password" value="SEND" class="form-submit-button" > </div>
 					<br><br>
 					</form>	
 				</div>
@@ -58,7 +69,13 @@ include 'emailsending.php';
 		</div>
 
 	</div>
-</div>
+				<div class="gobackbutton">
+						<span>back</span>
+						<br>
+						<a href="../index.php"><img style width:="30px" height="30px" src="../images/plus.png" alt=""></a>
+				</div>
+
+
 </body>
 </html>
 
