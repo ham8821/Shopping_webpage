@@ -28,7 +28,7 @@
   $("html,body").animate({scrollTop: 0}, 100); //100ms for example
 });
   
-  </script>
+   </script>
     <!-------------------------------------------------------------------------
         Navigation bar and half-full back image and slogan in the middle-------->
 

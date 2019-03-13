@@ -154,7 +154,7 @@ function validate_forgot() {
 }
 
 /*---------------------------------------password reset validation------------------------------------------------------------------------------*/
-<script>
+
 function validate_password_reset() {
 	if((document.getElementById("password").value == "") && (document.getElementById("confirm_password").value == "")) {
 		document.getElementById("validation-message").innerHTML = "Please enter new password!"
@@ -167,5 +167,5 @@ function validate_password_reset() {
 	
 	return true;
 }
-</script>
+
 /*---------------------------------------password reset validation------------------------------------------------------------------------------*/
