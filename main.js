@@ -169,3 +169,20 @@ function validate_password_reset() {
 }
 
 /*---------------------------------------password reset validation------------------------------------------------------------------------------*/
+function validate_password_reset2() {
+
+  if((document.getElementById("email").value == "")) {
+		document.getElementById("validation-message").innerHTML = "Please confirm your email address!"
+		return false;
+	}
+	if((document.getElementById("password").value == "") && (document.getElementById("confirm_password").value == "")) {
+		document.getElementById("validation-message").innerHTML = "Please enter new password!"
+		return false;
+	}
+	if(document.getElementById("password").value  != document.getElementById("confirm_password").value) {
+		document.getElementById("validation-message").innerHTML = "Both password should be same!"
+		return false;
+	}
+	
+	return true;
+}

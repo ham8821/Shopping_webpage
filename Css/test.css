@@ -2,8 +2,9 @@
 *{box-sizing: border-box};
 /* 
 font-family: 'Lora', serif;
-font-family: 'Roboto', sans-serif;
- */
+font-family: 'Roboto', sans
+/* font-family: 'Merriweather', serif;
+font-family: 'Noto Serif', serif; */
 html, body{
     margin:0;
     padding:0;

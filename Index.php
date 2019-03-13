@@ -9,26 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="Css/test.css">
-    <script  src="main.js" type="text/javascript"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="Css/css/bootstrap.css"></link>
-    <script type="text/javascript" src="Css/js/bootstrap.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lora|Roboto" rel="stylesheet">   
+   
     <title>testing page</title>
 </head>
 
 
 
 <body>
-    <script type="text/javascript">
-      $(document).ready(function() {
-  $("html,body").animate({scrollTop: 0}, 100); //100ms for example
-});
-  
-   </script>
+
     <!-------------------------------------------------------------------------
         Navigation bar and half-full back image and slogan in the middle-------->
 
@@ -51,7 +43,7 @@
                       <a class="nav-link" href="#section3">Contact us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My account</a>
+                        <a class="nav-link" href="myaccount.php">My account</a>
                       </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="myFunction(); return false">Service hour</a>
@@ -334,7 +326,16 @@
           <div class="col"><a class="social-inner" href="#"><span class="icon mdi mdi-youtube-play"></span><span>google</span></a></div>
         </div>
       </footer>
-
+      <script type="text/javascript" src="Css/js/bootstrap.js"></script>
+      <script  src="main.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+     $("html,body").animate({scrollTop: 0}, 100); //100ms for example 
+      });
+     </script>
+    
       </body>
 
 
