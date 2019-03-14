@@ -24,8 +24,8 @@ $password= filter_input(INPUT_POST,'password');
                         // $row = mysql_fetch_array($query);
                             while ($row = mysqli_fetch_array($query)){
                                  echo "Login successfully";
-                       
-                               //  header("location: ../index.php");
+                                
+                                header("location: ../index_loginsuccess.php");
                             }
                         }
         }                           

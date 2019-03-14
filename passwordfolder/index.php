@@ -43,7 +43,7 @@ include 'emailsending.php';
 			</div>
 			<div class="row">
 				<div class="formbox col-sm-12 col-lg-12">
-					<form name="frmForgot" id="frmForgot" method="post" onSubmit="return validate_forgot();">
+					<form name="frmForgot" id="frmForgot" method="post">
 					<?php if(!empty($success_message)) { ?>
 					<div class="success_message"><?php echo $success_message; ?></div>
 					<?php } ?>
@@ -59,7 +59,7 @@ include 'emailsending.php';
 					<br>
 					<div><input type="text" name="user-email" id="user-email" value="Email Address" class="input-field"> </div>
 					<br>
-					<div><input type="submit" name="forgot-password" id="forgot-password" value="SEND" class="form-submit-button" > </div>
+					<div><input type="submit" name="forgot-password" id="forgot-password" value="SEND" class="form-submit-button" onclick="return validate_forgot();"> </div>
 					<br><br>
 					</form>	
 				</div>

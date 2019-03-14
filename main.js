@@ -147,21 +147,21 @@ if (password.length < 1 || password.length > 40) {
 
 function validate_forgot() {
 	if((document.getElementById("user-login-name").value == "") && (document.getElementById("user-email").value == "")) {
-		document.getElementById("validation-message").innerHTML = "Email is required!"
+		document.getElementById("validation-message").innerHTML = "Email is required!";
 		return false;
 	}
-	return true
+	return true;
 }
 
 /*---------------------------------------password reset validation------------------------------------------------------------------------------*/
 
 function validate_password_reset() {
 	if((document.getElementById("password").value == "") && (document.getElementById("confirm_password").value == "")) {
-		document.getElementById("validation-message").innerHTML = "Please enter new password!"
+		document.getElementById("validation-message").innerHTML = "Please enter new password!";
 		return false;
 	}
 	if(document.getElementById("password").value  != document.getElementById("confirm_password").value) {
-		document.getElementById("validation-message").innerHTML = "Both password should be same!"
+		document.getElementById("validation-message").innerHTML = "Both password should be same!";
 		return false;
 	}
 	
@@ -172,17 +172,74 @@ function validate_password_reset() {
 function validate_password_reset2() {
 
   if((document.getElementById("email").value == "")) {
-		document.getElementById("validation-message").innerHTML = "Please confirm your email address!"
+		document.getElementById("validation-message").innerHTML = "Please confirm your email address!";
 		return false;
 	}
 	if((document.getElementById("password").value == "") && (document.getElementById("confirm_password").value == "")) {
-		document.getElementById("validation-message").innerHTML = "Please enter new password!"
+		document.getElementById("validation-message").innerHTML = "Please enter new password!";
 		return false;
 	}
 	if(document.getElementById("password").value  != document.getElementById("confirm_password").value) {
-		document.getElementById("validation-message").innerHTML = "Both password should be same!"
+		document.getElementById("validation-message").innerHTML = "Both password should be same!";
 		return false;
 	}
 	
 	return true;
 }
+
+/*---------------------------------------cc detail validation------------------------------------------------------------------------------*/
+function validate_creditcard_update() {
+        var email= document.getElementById("email");
+        var Ccnumber= document.getElementById("Ccnumber");
+        var Vdate= document.getElementById("Vdate");
+        var Nameoncard= document.getElementById("Nameoncard");
+        var CVV= document.getElementById("CVV");
+ 
+ 
+        if (!email.checkValidity()) {
+          document.getElementById("demo").innerHTML = email.validationMessage;
+        } else {
+          document.getElementById("demo").innerHTML = "Input OK";
+        } 
+ 
+        if (!Ccnumber.checkValidity()) {
+          document.getElementById("demo").innerHTML = Ccnumber.validationMessage;
+        } else {
+          document.getElementById("demo").innerHTML = "Input OK";
+        } 
+ 
+        if (!Vdate.checkValidity()) {
+          document.getElementById("demo").innerHTML = Vdate.validationMessage;
+        } else {
+          document.getElementById("demo").innerHTML = "Input OK";
+        } 
+ 
+        if (!Nameoncard.checkValidity()) {
+          document.getElementById("demo").innerHTML = Nameoncard.validationMessage;
+        } else {
+          document.getElementById("demo").innerHTML = "Input OK";
+        } 
+
+        if (!CVV.checkValidity()) {
+          document.getElementById("demo").innerHTML = CVV.validationMessage;
+        } else {
+          document.getElementById("demo").innerHTML = "Input OK";
+        } 
+
+}
+/*---------------------------------------address validation------------------------------------------------------------------------------*/
+
+function validate_address_update(){
+  if((document.getElementById("email").value == "")) {
+		document.getElementById("validation-message").innerHTML = "Please enter new password!";
+		return false;
+	}
+	if(document.getElementById("address").value  != document.getElementById("confirm_password").value) {
+		document.getElementById("validation-message").innerHTML = "Both password should be same!";
+		return false;
+	}
+	
+	return true;
+}
+
+

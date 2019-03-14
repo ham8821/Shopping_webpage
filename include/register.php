@@ -36,6 +36,10 @@
    */
   $_SESSION['message']= "Done!";
   $_SESSION['email']=$email;
+  $_SESSION['firstname']=$firstname;
+  $_SESSION['lastname']=$lastname;
+  $_SESSION['password']=$password;
+  $_SESSION['address']=$address;
   header("location: ../index_loginsuccess.php"); //redirect to home page
     
   

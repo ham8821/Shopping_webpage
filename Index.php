@@ -1,6 +1,11 @@
 <?php
  session_start();
- //$_SESSION['email']=$_POST['']
+  $_SESSION['email']=$email;
+  $_SESSION['firstname']=$firstname;
+  $_SESSION['lastname']=$lastname;
+  $_SESSION['password']=$password;
+  $_SESSION['address']=$address;
+ 
  ?>
  
 <!DOCTYPE html>
