@@ -150,11 +150,36 @@
                                 <div id="Addcreditcard" class="tabcontent">
                                   <h5>Add credit card</h5>
                                   <div class="row">
-                                      <div class="col"><a href="#">Living Room</a></div>
-                                      <div class="col"><a href="#">Kitchen</a></div>
-                                      <div class="col"><a href="#">Bedroom</a></div>
-                                      <div class="col"> <a href="#">Lights</a> </div>
+                                  <i class="glyphicon glyphicon-plus"></i>
+                                  <i class="glyphicon glyphicon-minus"></i>
+                                  <form action="">
+                                    <?php if(!empty($success_message)) { ?>
+                                      <div class="success_message"><?php echo $success_message; ?></div>
+                                      <?php } ?>
+
+                                      <div id="validation-message">
+                                          <?php if(!empty($error_message)) { ?>
+                                      <?php echo $error_message; ?>
+                                      <?php } ?>
+                                      </div>
+
+                                    <div><label for="number">Credit cart number</label></div>
+                                    <div>
+                                    <input type="text" name="Ccnumber" id="Ccnumber" class="input-field2"></div>
+                                    <div><label for="date">Valid date</label></div>
+                                    <div>
+                                    <input type="text" name="Vadate" id="Vadate" class="input-field2"></div>
+                                    <div><label for="text">Card holder Name</label></div>
+                                    <div>
+                                    <input type="text" name="Nameoncard" id="Nameoncard" class="input-field2"></div>
+                                    <div><label for="text">CVV number</label></div>
+                                    <div>
+                                    <input type="text" name="CVV" id="CVV" class="input-field2"></div>
+                                    <div><input type="submit" name="Addcreditcard" id="Addcreditcard" value="+" ></div>
+                                  </form>
+
                                   </div>
+                                  
                                 </div>
                         
                                 <div id="Updateaddress" class="tabcontent">
@@ -163,7 +188,7 @@
                                   <br>
                                   <div class="row">
                                   <div class="logoimg col-sm-12 col-lg-12">
-                                  <img style width="50px" height="50px" src="images/update.png" alt="">
+                                  <img id="icon1" src="images/origami.png" alt="">
                                   
                                   </div>
                                   <div class="formrow col-sm-12 col-lg-12">

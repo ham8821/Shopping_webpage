@@ -13,10 +13,10 @@ html, body{
     width:100%;
   
 }
-img{
+/* img{
     width:100%;
     height: 100%;
-}
+} */
   .formbox{
     padding: 0 0;
   }
@@ -95,6 +95,10 @@ img{
   background-color: rgba(238, 132, 52, 0.5);
   height: 100%;
 }
+#Addcreditcard{
+  background-color:rgba(153, 209, 156, 0.5);
+  height: 100%;
+}
 .input-field2{
   border-top: none;
   border-left: none;
@@ -108,4 +112,7 @@ img{
   color: white;
   border: none;
   padding: 3px 10px;
+}
+#icon1{
+  width:50px !important;
 }

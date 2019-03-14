@@ -1,4 +1,6 @@
-
+<?php
+ session_start();
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +58,8 @@
                     <div class="line"></div>
                   </div>
                 </label>
-                
+                </div>
+                <div class="col-6">
                 <label>
                   <p class="label-txt">ENTER YOUR PASSWORD <span class="required">*</span></p>
                   <input type="password" class="input" value="111" required="required" name="password">
@@ -73,43 +76,10 @@
                     </div>
                   </label>
                 </div>
-                <div class="col-6">
-                  <label>
-                      <p class="label-txt">CREDIT CARD NUMBER<span class="required">*</span></p>
-                      <input type="text" class="input" name="Ccnumber">
-                      <div class="line-box">
-                        <div class="line"></div>
-                      </div>
-                    </label>
-                 
-                 
-                    <label>
-                      <p class="label-txt">VALIDATED DATE<span class="required">*</span></p>
-                      <input type="text" class="input" name="vdate">
-                      <div class="line-box">
-                        <div class="line"></div>
-                      </div>
-                    </label>
-                    <label>
-                      <p class="label-txt">CARD HOLDER NAME<span class="required">*</span></p>
-                      <input type="text" class="input" name="cardholder">
-                      <div class="line-box">
-                        <div class="line"></div>
-                      </div>
-                    </label>
-
-                    <label>
-                      <p class="label-txt">CVV NUMBER<span class="required">*</span></p>
-                      <input type="text" class="input" name="cvv"> 
-                      <div class="line-box">
-                        <div class="line"></div>
-                      </div>
-                    </label>
-
                      <button type="submit" name="submit" class="submitbutton">Submit</button>
                     
                   </div>
-                   
+                  </div>
                
             
               </div>

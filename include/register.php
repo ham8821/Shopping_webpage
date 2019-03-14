@@ -12,19 +12,31 @@
   
     
     $address= mysqli_real_escape_string($db,$_POST['address']);
-    $Ccnumber= mysqli_real_escape_string($db,$_POST['Ccnumber']);
+    /*$Ccnumber= mysqli_real_escape_string($db,$_POST['Ccnumber']);
     $vdate= mysqli_real_escape_string($db,$_POST['vdate']);
     $cardholder= mysqli_real_escape_string($db,$_POST['cardholder']);
-    $cvv= mysqli_real_escape_string($db,$_POST['cvv']);
+    $cvv= mysqli_real_escape_string($db,$_POST['cvv']);*/
 
    
-    $mypassword = md5 ($_POST['password']);
-   $sql="INSERT INTO user(firstName, lastName, password, address, email, Ccnumber) values ('$firstname','$lastname','$password','$address','$email','$Ccnumber')";
-   mysqli_query($db,$sql);
+    //$mypassword = md5 ($_POST['password']);
+    
+  $sql="INSERT INTO user(firstName, lastName, password, address, email) values ('$firstname','$lastname','$password','$address','$email')"; 
+ 
+  mysqli_query($db,$sql);
+ /*  $result=mysqli_multi_query($db,$sql);
+  if($result){
+        do{
+          if(($result=mysqli_sotre_result()))
+        }
+  }
    
+   $readSql="SELECT userID FROM user where email =$email"
+   $sql2="INSERT INTO usercc('userID','Ccnumber','Vdate','Nameoncard','CVV') VALUES ('$readSql','$Ccnumber','$vdate','$cardholder','$cvv')";
+   mysqli_query($db,$sql2);
+   */
   $_SESSION['message']= "Done!";
   $_SESSION['email']=$email;
-  header("location: ../index.php"); //redirect to home page
+  header("location: ../index_loginsuccess.php"); //redirect to home page
     
   
 
