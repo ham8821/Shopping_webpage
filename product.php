@@ -18,7 +18,7 @@
     <title>productpage</title>
 </head>
 <body>
-    <div class="background">   </div>
+    <!-- <div class="background">   </div> -->
 
     <section class="header">
     
@@ -56,23 +56,17 @@
            <div class="pic3 col-sm-12 col-md-4 col-lg-4"> 
             
                 <div class="productdescription">
-                    
+                    <h3>Produtname</h3>
+                    <h3>State</h3>
             <table style="width:100%">
                     <tr class="rows">
                     <th>Category</th>
-                    <th>Condition</th> 
                     <th>Price</th>
                     <th>Negotiation</th>
                     </tr>
                     <tr class="rows">
                     <td>Laptop,Digital</td>
-                    <td>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                    </td>
+                   
                     <td>$500</td>
                     <td>
                             <span class="negoyes">O</span>
@@ -105,7 +99,7 @@
                                     <span class="glyphicon glyphicon-envelope"></span> Message
                                   </a>
 
-                                  <a href="productlist.html" id="button2" class="btn btn-info btn-lg">
+                                  <a href="productlist.php" id="button2" class="btn btn-info btn-lg">
                                         <span class="glyphicon glyphicon-backward"></span> Back
                                       </a>
                </div>

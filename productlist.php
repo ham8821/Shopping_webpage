@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                           <ul class="navbar-nav">
                             <li class="nav-item active">
-                              <a class="nav-link" href="test.html">Home <span class="sr-only">(current)</span></a>
+                              <a class="nav-link" href="test.php">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">My account</a>
@@ -133,7 +133,7 @@
                             <div class="contentbox">
                             <img src="images/laptop1.jpg" alt="laptopphoto" class="pic">
                                 <div class="productdescription">
-                                <p class="producttitle"><a href="product.html">Good condition laptop SALE!!</a></p>
+                                <p class="producttitle"><a href="product.php">Good condition laptop SALE!!</a></p>
                                 <p class="price">$500</p>
                                 <p class="userId">ham8821</p>
                                 </div>
@@ -145,7 +145,7 @@
                             <div class="contentbox">
                             <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
                             <div class="productdescription">
-                                <p class="producttitle"><a href="product.html">Title</a></p>
+                                <p class="producttitle"><a href="product.php">Title</a></p>
                                 <p class="price">$price</p>
                                 <p class="userId">ham8821</p>
                                 </div>
@@ -157,7 +157,7 @@
                           <div class="contentbox">
                           <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
                           <div class="productdescription">
-                              <p class="producttitle"><a href="product.html">Title</a></p>
+                              <p class="producttitle"><a href="product.php">Title</a></p>
                               <p class="price">$price</p>
                               <p class="userId">ham8821</p>
                               </div>
@@ -168,7 +168,7 @@
                           <div class="contentbox">
                               <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
                               <div class="productdescription">
-                                  <p class="producttitle"><a href="product.html">Title</a></p>
+                                  <p class="producttitle"><a href="product.php">Title</a></p>
                                   <p class="price">$price</p>
                                   <p class="userId">ham8821</p>
                                   </div>
@@ -181,7 +181,7 @@
                           <div class="contentbox">
                           <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
                           <div class="productdescription">
-                              <p class="producttitle"><a href="product.html">Title</a></p>
+                              <p class="producttitle"><a href="product.php">Title</a></p>
                               <p class="price">$price</p>
                               <p class="userId">ham8821</p>
                               </div>
@@ -193,7 +193,7 @@
                         <div class="contentbox">
                         <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
                         <div class="productdescription">
-                            <p class="producttitle"><a href="product.html">Title</a></p>
+                            <p class="producttitle"><a href="product.php">Title</a></p>
                             <p class="price">$price</p>
                             <p class="userId">ham8821</p>
                             </div>
@@ -204,7 +204,7 @@
                         <div class="contentbox">
                             <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
                             <div class="productdescription">
-                                <p class="producttitle"><a href="product.html">Title</a></p>
+                                <p class="producttitle"><a href="product.php">Title</a></p>
                                 <p class="price">$price</p>
                                 <p class="userId">ham8821</p>
                                 </div>
@@ -217,7 +217,7 @@
                         <div class="contentbox">
                         <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
                         <div class="productdescription">
-                            <p class="producttitle"><a href="product.html">Title</a></p>
+                            <p class="producttitle"><a href="product.php">Title</a></p>
                             <p class="price">$price</p>
                             <p class="userId">ham8821</p>
                             </div>
@@ -229,7 +229,7 @@
                       <div class="contentbox">
                       <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
                       <div class="productdescription">
-                          <p class="producttitle"><a href="product.html">Title</a></p>
+                          <p class="producttitle"><a href="product.php">Title</a></p>
                           <p class="price">$price</p>
                           <p class="userId">ham8821</p>
                           </div>
@@ -240,7 +240,7 @@
                       <div class="contentbox">
                           <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
                           <div class="productdescription">
-                              <p class="producttitle"><a href="product.html">Title</a></p>
+                              <p class="producttitle"><a href="product.php">Title</a></p>
                               <p class="price">$price</p>
                               <p class="userId">ham8821</p>
                               </div>
@@ -252,7 +252,7 @@
                       <div class="contentbox">
                       <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
                       <div class="productdescription">
-                          <p class="producttitle"><a href="product.html">Title</a></p>
+                          <p class="producttitle"><a href="product.php">Title</a></p>
                           <p class="price">$price</p>
                           <p class="userId">ham8821</p>
                           </div>
@@ -264,7 +264,7 @@
                     <div class="contentbox">
                     <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
                     <div class="productdescription">
-                        <p class="producttitle"><a href="product.html">Title</a></p>
+                        <p class="producttitle"><a href="product.php">Title</a></p>
                         <p class="price">$price</p>
                         <p class="userId">ham8821</p>
                         </div>

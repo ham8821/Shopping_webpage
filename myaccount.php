@@ -268,7 +268,7 @@
                             <div class="contentbox">
                             <img class="img-fluid" src="images/laptop1.jpg" alt="laptopphoto" class="pic">
                                 <div class="productdescription">
-                                <p class="producttitle"><a href="product.html">Good condition laptop SALE!!</a></p>
+                                <p class="producttitle"><a href="product.php">Good condition laptop SALE!!</a></p>
                                 <p class="price">$500</p>
                                 <p class="userId">ham8821</p>
                                 </div>
@@ -280,7 +280,7 @@
                             <div class="contentbox">
                             <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                             <div class="productdescription">
-                                <p class="producttitle"><a href="product.html">Title</a></p>
+                                <p class="producttitle"><a href="product.php">Title</a></p>
                                 <p class="price">$price</p>
                                 <p class="userId">ham8821</p>
                                 </div>
@@ -293,7 +293,7 @@
                           <div class="contentbox">
                           <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                           <div class="productdescription">
-                              <p class="producttitle"><a href="product.html">Title</a></p>
+                              <p class="producttitle"><a href="product.php">Title</a></p>
                               <p class="price">$price</p>
                               <p class="userId">ham8821</p>
                               </div>
@@ -305,7 +305,7 @@
                           <div class="contentbox">
                               <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                               <div class="productdescription">
-                                  <p class="producttitle"><a href="product.html">Title</a></p>
+                                  <p class="producttitle"><a href="product.php">Title</a></p>
                                   <p class="price">$price</p>
                                   <p class="userId">ham8821</p>
                                   </div>
@@ -318,7 +318,7 @@
                           <div class="contentbox">
                           <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                           <div class="productdescription">
-                              <p class="producttitle"><a href="product.html">Title</a></p>
+                              <p class="producttitle"><a href="product.php">Title</a></p>
                               <p class="price">$price</p>
                               <p class="userId">ham8821</p>
                               </div>
@@ -331,7 +331,7 @@
                         <div class="contentbox">
                         <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                         <div class="productdescription">
-                            <p class="producttitle"><a href="product.html">Title</a></p>
+                            <p class="producttitle"><a href="product.php">Title</a></p>
                             <p class="price">$price</p>
                             <p class="userId">ham8821</p>
                             </div>
@@ -343,7 +343,7 @@
                         <div class="contentbox">
                             <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                             <div class="productdescription">
-                                <p class="producttitle"><a href="product.html">Title</a></p>
+                                <p class="producttitle"><a href="product.php">Title</a></p>
                                 <p class="price">$price</p>
                                 <p class="userId">ham8821</p>
                                 </div>
@@ -356,7 +356,7 @@
                         <div class="contentbox">
                         <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                         <div class="productdescription">
-                            <p class="producttitle"><a href="product.html">Title</a></p>
+                            <p class="producttitle"><a href="product.php">Title</a></p>
                             <p class="price">$price</p>
                             <p class="userId">ham8821</p>
                             </div>
@@ -369,7 +369,7 @@
                       <div class="contentbox">
                       <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                       <div class="productdescription">
-                          <p class="producttitle"><a href="product.html">Title</a></p>
+                          <p class="producttitle"><a href="product.php">Title</a></p>
                           <p class="price">$price</p>
                           <p class="userId">ham8821</p>
                           </div>
@@ -381,7 +381,7 @@
                       <div class="contentbox">
                           <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                           <div class="productdescription">
-                              <p class="producttitle"><a href="product.html">Title</a></p>
+                              <p class="producttitle"><a href="product.php">Title</a></p>
                               <p class="price">$price</p>
                               <p class="userId">ham8821</p>
                               </div>
@@ -393,7 +393,7 @@
                       <div class="contentbox">
                       <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                       <div class="productdescription">
-                          <p class="producttitle"><a href="product.html">Title</a></p>
+                          <p class="producttitle"><a href="product.php">Title</a></p>
                           <p class="price">$price</p>
                           <p class="userId">ham8821</p>
                           </div>
@@ -405,7 +405,7 @@
                       <div class="contentbox">
                       <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                       <div class="productdescription">
-                          <p class="producttitle"><a href="product.html">Title</a></p>
+                          <p class="producttitle"><a href="product.php">Title</a></p>
                           <p class="price">$price</p>
                           <p class="userId">ham8821</p>
                           </div>
