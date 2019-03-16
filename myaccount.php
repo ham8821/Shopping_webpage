@@ -48,7 +48,7 @@
                     </li>
         
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My cart</a>
+                        <a class="nav-link" href="myproduct.php">My Product</a>
                       </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="myFunction(); return false">Service hour</a>
@@ -257,15 +257,16 @@
 <!----------------------------------------------------- my product list -------------------------------------------------------------->
 <br>
 <section id="mycart">
-    <br>
-    <h3> My Cart </h3>
+    <br><br>
+   <center> <h3> My Cart </h3></center>
     <br><br>
                 <div class="container">
                  <div class="row">
                       
                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                     <input type="checkbox" class="checkbox" name="select" value="select">
                             <div class="contentbox">
-                            <img src="images/laptop1.jpg" alt="laptopphoto" class="pic">
+                            <img class="img-fluid" src="images/laptop1.jpg" alt="laptopphoto" class="pic">
                                 <div class="productdescription">
                                 <p class="producttitle"><a href="product.html">Good condition laptop SALE!!</a></p>
                                 <p class="price">$500</p>
@@ -275,9 +276,9 @@
                       </div>
 
                       <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                        
+                      <input type="checkbox" class="checkbox" name="select" value="select">
                             <div class="contentbox">
-                            <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
+                            <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                             <div class="productdescription">
                                 <p class="producttitle"><a href="product.html">Title</a></p>
                                 <p class="price">$price</p>
@@ -287,9 +288,10 @@
                              </div>
                       </div>
      
-                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">                  
+                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">   
+                      <input type="checkbox" class="checkbox" name="select" value="select">               
                           <div class="contentbox">
-                          <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
+                          <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                           <div class="productdescription">
                               <p class="producttitle"><a href="product.html">Title</a></p>
                               <p class="price">$price</p>
@@ -299,8 +301,9 @@
                       </div>
 
                       <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                      <input type="checkbox" class="checkbox" name="select" value="select">
                           <div class="contentbox">
-                              <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
+                              <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                               <div class="productdescription">
                                   <p class="producttitle"><a href="product.html">Title</a></p>
                                   <p class="price">$price</p>
@@ -311,9 +314,9 @@
                       </div>
 
                       <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                        
+                      <input type="checkbox" class="checkbox" name="select" value="select">
                           <div class="contentbox">
-                          <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
+                          <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                           <div class="productdescription">
                               <p class="producttitle"><a href="product.html">Title</a></p>
                               <p class="price">$price</p>
@@ -323,9 +326,10 @@
                            </div>
                     </div>
    
-                    <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">                  
+                    <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">  
+                    <input type="checkbox" class="checkbox" name="select" value="select">                
                         <div class="contentbox">
-                        <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
+                        <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                         <div class="productdescription">
                             <p class="producttitle"><a href="product.html">Title</a></p>
                             <p class="price">$price</p>
@@ -335,8 +339,9 @@
                     </div>
 
                     <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                    <input type="checkbox" class="checkbox" name="select" value="select">
                         <div class="contentbox">
-                            <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
+                            <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                             <div class="productdescription">
                                 <p class="producttitle"><a href="product.html">Title</a></p>
                                 <p class="price">$price</p>
@@ -347,9 +352,9 @@
                     </div>
 
                     <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                        
+                    <input type="checkbox" class="checkbox" name="select" value="select">
                         <div class="contentbox">
-                        <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
+                        <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                         <div class="productdescription">
                             <p class="producttitle"><a href="product.html">Title</a></p>
                             <p class="price">$price</p>
@@ -359,9 +364,10 @@
                          </div>
                   </div>
  
-                  <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">                  
+                  <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">     
+                  <input type="checkbox" class="checkbox" name="select" value="select">             
                       <div class="contentbox">
-                      <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
+                      <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                       <div class="productdescription">
                           <p class="producttitle"><a href="product.html">Title</a></p>
                           <p class="price">$price</p>
@@ -371,8 +377,9 @@
                   </div>
 
                   <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                  <input type="checkbox" class="checkbox" name="select" value="select">
                       <div class="contentbox">
-                          <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
+                          <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                           <div class="productdescription">
                               <p class="producttitle"><a href="product.html">Title</a></p>
                               <p class="price">$price</p>
@@ -382,9 +389,9 @@
                            </div>
                   </div>
                   <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                        
+                  <input type="checkbox" class="checkbox" name="select" value="select">
                       <div class="contentbox">
-                      <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
+                      <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
                       <div class="productdescription">
                           <p class="producttitle"><a href="product.html">Title</a></p>
                           <p class="price">$price</p>
@@ -393,20 +400,25 @@
 
                        </div>
                 </div>
-
-                <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">                  
-                    <div class="contentbox">
-                    <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                    <div class="productdescription">
-                        <p class="producttitle"><a href="product.html">Title</a></p>
-                        <p class="price">$price</p>
-                        <p class="userId">ham8821</p>
-                        </div>
-                     </div>  
-                </div>
+                <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">     
+                  <input type="checkbox" class="checkbox" name="select" value="select">             
+                      <div class="contentbox">
+                      <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
+                      <div class="productdescription">
+                          <p class="producttitle"><a href="product.html">Title</a></p>
+                          <p class="price">$price</p>
+                          <p class="userId">ham8821</p>
+                          </div>
+                       </div>  
+                  </div>
+             
 
             
                 </div>
+                <hr>
+                <center><button type="button" class="btn btn-warning">Check out</button></center>
+                <br> <br>
+
                  </div>
 
               </div>
