@@ -101,16 +101,20 @@
                                   </div>
                                   <div class="row">
                                       <div class="profile col-12">
-                                      <h3>Hi <?php echo $_SESSION['firstname']  ?>!</h3>
-                                      <h3>WELCOME <?php echo $_SESSION['email'] ?> !</h3>
-                                      <h3>WELCOME <?php echo $_SESSION['address'] ?> !</h3>
-
-                                      </div>
+                                      <hr>
+                                          <h5> Profile</h5>
+                                         <div class="profileinfo"> 
+                                        <span>Email:  <?php echo $_SESSION['email'] ?> </span><br>
+                                        <span>Name:  <?php echo $_SESSION['firstName']  ?> </span><span><?php echo $_SESSION['lastName']  ?> </span><br>
+                                        <span>Address:  <?php echo $_SESSION['address'] ?> </span><br>
+                                        <span>Inbox:  <a href="#">0 mailbox</a></span><br>
+                                        <span>Credit card:  <a href="#addingcredit">Click here to add it!</a> </span>
+                                        </div>
                                     </div>
 
 
                                 </div>
-
+                              </div>
 
                                 <div id="ResetPassword" class="tabcontent">
                                     <br>
@@ -154,7 +158,7 @@
                                   <br> 
                                   <h5>Add credit card</h5>
                                   <hr>
-                                  <div class="row">
+                                  <div id="addingcredit" class="row">
                                  <div class="Addcreditcardbox">
                                   <form name="Addcreditcard" method="post">
                                   <?php if(!empty($success_message)) { ?>

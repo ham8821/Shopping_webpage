@@ -79,20 +79,19 @@ html, body{
 .contentbox #frmForgot{
   text-align: center;
 }
-.row{
-  text-align: center;
-}
 
-#ResetPassword{
-  background-color:rgba(153, 209, 156, 0.5);
-  height: 100%;
-}
+
 #Myaccount{
   background-color: rgba(191, 174, 72, 0.6);
   height: 100%;
 }
+#ResetPassword{
+  background-color:rgba(153, 209, 156, 0.5);
+  height: 100%;
+}
+
 #Updateaddress{
-  background-color: rgba(238, 132, 52, 0.5);
+  background-color: rgba(153, 209, 156, 0.5);
   height: 100%;
 }
 #Addcreditcard{

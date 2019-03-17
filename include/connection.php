@@ -1,4 +1,5 @@
 <?php
+ session_start();
 
 $useremail= filter_input(INPUT_POST,'useremail');
 $password= filter_input(INPUT_POST,'password');
@@ -21,11 +22,21 @@ $password= filter_input(INPUT_POST,'password');
                         else{
                             $sql="SELECT * from user where email='" . $useremail . "' and password='". $password ."'";
                             $query=mysqli_query($conn,$sql);
+                            $row = mysqli_fetch_array($query);
+                            $firstName = $row[1];
+                            $lastName= $row[2];
+                            $address = $row[4];
+                            
                         // $row = mysql_fetch_array($query);
-                            while ($row = mysqli_fetch_array($query)){
+                            while ($row){
                                  echo "Login successfully";
                                 
                                 header("location: ../index_loginsuccess.php");
+
+                                $_SESSION['email'] = $useremail;
+                                $_SESSION['address'] = $address;
+                                $_SESSION['firstName'] = $firstName;
+                                $_SESSION['lastName'] = $lastName;
                             }
                         }
         }                           
