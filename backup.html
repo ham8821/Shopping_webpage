@@ -1,0 +1,55 @@
+<?php if(!empty($success_message)) { ?>
+    <div class="success_message"><?php echo $success_message; ?></div>
+    <?php } ?>
+
+    <div id="validation-message">
+        <?php if(!empty($error_message)) { ?>
+    <?php echo $error_message; ?>
+    <?php } ?>
+</div>
+
+
+
+<form name="Addcreditcard">
+    <p id="demo"> </p>
+    <div class="row">
+        <div class="col-6">
+            <div>
+                <label for="text">Credit card number</label>
+            </div>
+            <div>
+                <input type="text" name="Ccnumber" id="Ccnumber" class="input-field2" required>
+            </div>
+            <div>
+                <label for="date">Valid date</label>
+            </div>
+            <div>
+                <input type="text" name="Vdate" id="Vdate" class="input-field2" required>
+            </div>
+        </div>
+        <div class="col-6">
+            <div>
+                <label for="text">Card holder Name</label>
+            </div>
+            <div>
+                <input type="text" name="Nameoncard" id="Nameoncard" class="input-field2" required>
+            </div>
+            <div>
+                <label for="text">CVV number</label>
+            </div>
+            <div>
+                <input type="text" name="CVV" id="CVV" class="input-field2" required>
+            </div>
+        </div> 
+    </div>
+    <hr>
+        <p id="t1">1</p>
+        <p id="t2">2</p>
+        <p id="t3">3</p>
+        <p id="t4">4s</p>
+    <div>
+        <button type="button" name="Addcreditcard" id="Addcreditcard" onclick="alertout();">
+            WILL WORK!!!!!
+        </button>
+    </div>
+</form>

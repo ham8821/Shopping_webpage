@@ -118,11 +118,11 @@
 
                                 <div id="ResetPassword" class="tabcontent">
                                     <br>
-                                  <h5>Reset Password</h5>
+                                    <center> <h5>Reset Password</h5></center>
                                   <hr>
                                   <div class="row">
                                   <div class="logoimg col-sm-12 col-lg-12">
-                                    <img style width="50px" height="50px" src="images/origami.png" alt="">
+                                  <center>  <img style width="50px" height="50px" src="images/origami.png" alt=""></center>
                                   </div>
                                   <div class="formrow col-sm-12 col-lg-12">
                                   <form name="frmForgot" id="frmForgot" method="post">
@@ -139,7 +139,7 @@
 
                                     <div><label for="Email">Confirm email address</label></div>
                                     <div>
-                                    <input type="email" name="email" id="email" class="input-field2"></div>
+                                    <input type="email" name="email" id="emailaddress" class="input-field2"></div>
                                     <div><label for="Password">Password</label></div>
                                     <div>
                                     <input type="password" name="password" id="password" class="input-field2"></div>
@@ -147,7 +147,7 @@
                                     <div><label for="Password">Confirm Password</label></div>
                                     <div><input type="password" name="confirm_password" id="confirm_password" class="input-field2"></div>
                                     <br>
-                                    <div><input type="submit" name="reset-password" id="reset-password2" value="RESET" class="form-submit-button" onclick="return validate_password_reset2();"></div>
+                                    <button type="submit" name="reset-password" id="reset-password2" value="RESET" class="form-submit-button" onclick="return validate_password_reset2();" class="btn  purple-gradient btn-lg btn-block">OK</button>
                                     <br>
                                     </form>	
                                         </div>
@@ -156,47 +156,50 @@
                                 
                                 <div id="Addcreditcard" class="tabcontent">
                                   <br> 
-                                  <h5>Add credit card</h5>
+                                  <center><h5>Add credit card</h5></center>
                                   <hr>
+                                 <span> <input type="checkbox" name="vehicle1" value="Bike">  </span>  <span>   <input type="checkbox" name="vehicle1" value="Bike"></span><br>
+                                  <a href="http://www.credit-card-logos.com/"><img alt="Credit Card Logos" title="Credit Card Logos" src="http://www.credit-card-logos.com/images/visa_credit-card-logos/visa_mastercard_logo_6.gif" width="102" height="32" border="0" /></a>
                                   <div id="addingcredit" class="row">
                                  <div class="Addcreditcardbox">
-                                  <form name="Addcreditcard" method="post">
-                                  <?php if(!empty($success_message)) { ?>
-                                    <div class="success_message"><?php echo $success_message; ?></div>
-                                    <?php } ?>
-
-                                    <div id="validation-message">
-                                        <?php if(!empty($error_message)) { ?>
-                                    <?php echo $error_message; ?>
-                                    <?php } ?>
-                                    </div>
-                                    <div><label for="Email">Confirm email address</label></div>
-                                    <div>
-                                    <input type="email" name="email" id="email" class="input-field2" required ></div>
-                                    <hr>
-                                    <p id="demo"> </p>
-                                    <div class="row">
-                                      <div class="col-6">
-                                          <div><label for="text">Credit card number</label></div>
-                                          <div>
-                                          <input type="text" name="Ccnumber" id="Ccnumber" class="input-field2" required></div>
-                                          <div><label for="date">Valid date</label></div>
-                                          <div>
-                                          <input type="text" name="Vdate" id="Vdate" class="input-field2"></div>
+                                  <form name="Addcreditcard">
+                                      <p id="demo"> </p>
+                                      <div class="row">
+                                          <div class="col-6">
+                                              <div>
+                                                  <label for="text">Credit card number</label>
+                                              </div>
+                                              <div>
+                                                  <input type="text" name="Ccnumber" id="Ccnumber" class="input-field2" required>
+                                              </div>
+                                              <div>
+                                                  <label for="date">Valid date</label>
+                                              </div>
+                                              <div>
+                                                  <input type="text" name="Vdate" id="Vdate" class="input-field2" required>
+                                              </div>
+                                          </div>
+                                          <div class="col-6">
+                                              <div>
+                                                  <label for="text">Card holder Name</label>
+                                              </div>
+                                              <div>
+                                                  <input type="text" name="Nameoncard" id="Nameoncard" class="input-field2" required>
+                                              </div>
+                                              <div>
+                                                  <label for="text">CVV number</label>
+                                              </div>
+                                              <div>
+                                                  <input type="text" name="CVV" id="CVV" class="input-field2" required>
+                                              </div>
+                                          </div> 
                                       </div>
-                                      <div class="col-6">
-                                      <div><label for="text">Card holder Name</label></div>
-                                    <div>
-                                    <input type="text" name="Nameoncard" id="Nameoncard" class="input-field2" required></div>
-                                    <div><label for="text">CVV number</label></div>
-                                    <div>
-                                    <input type="text" name="CVV" id="CVV" class="input-field2" required></div>
-                                      </div> 
-                                        </div>
-                                        <hr>
-                                        
-                                    <div><input type="submit" name="Addcreditcard" id="Addcreditcard" value="+" onclick="return validate_creditcard_update();"></div>
-                                    
+                                      <hr>
+                                         
+                                      <div>                              
+                                         
+                                          <button style:="" background-color="grey" type="button" name="Addcreditcard" id="Addcreditcard" class="form-submit-button" onclick="addcreditcard1();">OK</button>
+                                      </div>
                                   </form>
                                   </div>
                                   </div>
@@ -205,22 +208,22 @@
                         
                                 <div id="Updateaddress" class="tabcontent">
                                 <br>
-                                  <h5>Update Address</h5>
+                                <center>   <h5>Update Address</h5></center>
                                   <hr>
                                   <div class="row">
                                   <div class="logoimg col-sm-12 col-lg-12">
-                                  <img id="icon1" src="images/update.png" alt="">
+                                  <center><img id="icon1" src="images/update.png" alt=""> </center>
                                   
                                   </div>
                                   <div class="formrow col-sm-12 col-lg-12">
-                                  <form name="frmAdd" id="frmAdd" method="post">
+                                  <form name="frmAdd" id="Upaddress">
 
                                     <?php if(!empty($success_message)) { ?>
 
                                     <div class="success_message"><?php echo $success_message; ?></div>
 
-                                    <?php } ?>
-<hr>
+                                    <?php } ?>  
+                                      <hr>
                                     <div id="validation-message">
 
                                         <?php if(!empty($error_message)) { ?>
@@ -236,17 +239,15 @@
 
                                     <div><label for="address">New Address</label></div>
                                     <div>
-                                    <input type="password" name="address" id="address" class="input-field2" required></div>
+                                    <input type="address" name="newaddress" id="newaddress" class="input-field2" required></div>
                                     
-                                
                                     <br>
-                                    <div><input type="submit" name="reset-password" id="reset-password2" value="UPDATE" class="form-submit-button" onclick="return validate_address_update();"></div>
-                                    <br>
+                                    <button type="button" name="reset-password" id="reset-password" value="UPDATE" class="form-submit-button" onclick="updateaddress();" class="btn  purple-gradient btn-lg btn-block">OK</button>
                                     </form>	
                                         </div>
                                   </div>
                                 </div>
-
+                                        
 
 
             </div>

@@ -1,5 +1,6 @@
 
-  /*----------------service hour pop up----------------------------------------*/
+ 
+ /*----------------service hour pop up----------------------------------------*/
   function myFunction() {
     alert("Our service hour is"+"\n"+""+"\n"+"Monday: 9AM-4PM"+"\n"+"Tuesday: 9AM-4PM"+"\n"+"Wednesday: 9AM-4PM"+"\n"+"Thursday: 9AM-4PM"+"\n"+"Friday: 9AM-4PM"+"\n"+"Saturday: 10AM-1PM"+"\n"+"Sunday: Closed");
     
@@ -25,19 +26,19 @@
    document.getElementById("defaultOpen").click();
 
   /*----------------registration form----------------------------------------*/
-  $(document).ready(function(){
+  // $(document).ready(function(){
 
-    $('.input').focus(function(){
-      $(this).parent().find(".label-txt").addClass('label-active');
-    });
+  //   $('.input').focus(function(){
+  //     $(this).parent().find(".label-txt").addClass('label-active');
+  //   });
   
-    $(".input").focusout(function(){
-      if ($(this).val() == '') {
-        $(this).parent().find(".label-txt").removeClass('label-active');
-      };
-    });
+  //   $(".input").focusout(function(){
+  //     if ($(this).val() == '') {
+  //       $(this).parent().find(".label-txt").removeClass('label-active');
+  //     };
+  //   });
   
-  });
+  // });
   /*-----directing to the top of the main page by default----------------------------------------------*/
   window.onload = function() {document.body.scrollTop = document.documentElement.scrollTop = 0;};
   $(window).on('beforeunload', function() {
@@ -228,18 +229,75 @@ function validate_creditcard_update() {
 
 }
 /*---------------------------------------address validation------------------------------------------------------------------------------*/
+function updateaddress() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        //location.assign("include/updateaddress.php");
+          console.log(xmlhttp);
+        if (xmlhttp.responseText == 1)
+        alert("your address updated");
+       
+      }
+      else{
+        //alert("failed");
+        }
+      }
+      var newaddress= document.getElementById('newaddress').value;
+      xmlhttp.open("GET", "include/updateaddress.php?newaddress="+newaddress, true);
+     xmlhttp.send();
+    }
 
-function validate_address_update(){
-  if((document.getElementById("email").value == "")) {
-		document.getElementById("validation-message").innerHTML = "Please enter new password!";
-		return false;
-	}
-	if(document.getElementById("address").value  != document.getElementById("confirm_password").value) {
-		document.getElementById("validation-message").innerHTML = "Both password should be same!";
-		return false;
-	}
-	
-	return true;
+/*----------------------------------------------------------------------------------------------------------------------------------------*/
+function addcreditcard1() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        // location.assign("sendingdata.php");
+          console.log(xmlhttp);
+        if (xmlhttp.responseText == 1)
+          alert("your card added");
+      }
+      else{
+         // alert("failed"); 
+      }
+
+   }
+    var ccnumber1 = document.getElementById('Ccnumber').value;
+    var nameoncard1 = document.getElementById('Nameoncard').value;
+    var cvv1 = document.getElementById('CVV').value;
+    var validdate1 = document.getElementById('Vdate').value;
+
+
+  xmlhttp.open("GET", "sendingdata.php?Ccnumber="+ccnumber1+"&Vdate="+validdate1+"&noc="+nameoncard1+"&cvv="+cvv1, true);
+  xmlhttp.send();
 }
 
+// function alertout () {
+//     var ccnumber1 = document.getElementById('Ccnumber').value;
+//     var nameoncard1 = document.getElementById('Nameoncard').value;
+//     var cvv1 = document.getElementById('CVV').value;
+//     var validdate1 = document.getElementById('Vdate').value;
+//     // alert(ccnumber);
+//     // alert(nameoncard);
+//     // alert(cvv);
+//     // alert(validdate);
 
+//     document.getElementById('t1').innerHTML = ccnumber1;
+//     document.getElementById('t2').innerHTML = nameoncard1;
+//     document.getElementById('t3').innerHTML = cvv1;
+//     document.getElementById('t4').innerHTML = validdate1;
+
+// }
+// function function1(ccnum) {
+//   $_GLOBAL['ccnumber'] = ccnum;
+// }
+// function function2(vd) {
+//   $_GLOBAL['validdate'] = vd;
+// }
+// function function3(noc) {
+//   $_GLOBAL['nameoncard'] = noc;
+// }
+// function function4(cvv) {
+//   $_GLOBAL['cvv'] = cvv;
+// }

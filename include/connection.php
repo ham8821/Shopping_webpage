@@ -3,6 +3,7 @@
 
 $useremail= filter_input(INPUT_POST,'useremail');
 $password= filter_input(INPUT_POST,'password');
+
     if(!empty($useremail)){
         if (!empty($password)){
                 $localhost="localhost";
@@ -26,9 +27,9 @@ $password= filter_input(INPUT_POST,'password');
                             $firstName = $row[1];
                             $lastName= $row[2];
                             $address = $row[4];
-                            
+                            $userID= $row[0];
                         // $row = mysql_fetch_array($query);
-                            while ($row){
+                            if ($row){
                                  echo "Login successfully";
                                 
                                 header("location: ../index_loginsuccess.php");
@@ -37,6 +38,10 @@ $password= filter_input(INPUT_POST,'password');
                                 $_SESSION['address'] = $address;
                                 $_SESSION['firstName'] = $firstName;
                                 $_SESSION['lastName'] = $lastName;
+                                $_SESSION['userID']=$userID;
+
+                                echo "$useremail.$address.$firstName.$lastName.$userID";
+                                header('Location: ../index_loginsuccess.php');
                             }
                         }
         }                           
