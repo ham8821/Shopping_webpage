@@ -35,10 +35,10 @@ session_start();
                         <div class="collapse navbar-collapse" id="navbarNav">
                           <ul class="navbar-nav">
                             <li class="nav-item active">
-                              <a class="nav-link" href="test.php">Home <span class="sr-only">(current)</span></a>
+                              <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">My account</a>
+                                <a class="nav-link" href="myaccount.php">My account</a>
                               </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#" onclick="myFunction(); return false">Service hour</a>
@@ -128,162 +128,73 @@ session_start();
 
               </section>
     
-
-              <section>
-                <div class="container">
-                 <div class="row">
-                      
-                     <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                                <div class="contentbox">
-                                <img src="images/laptop1.jpg" alt="laptopphoto" class="pic">
-                                <iframe onload="loadingproducts();" src="/default.asp"></iframe>
-
-                                <p id="demo"></p>
-
-
-                            </div>
-                      </div>
-<!-- 
-                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                        
-                            <div class="contentbox">
-                            <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                            <div class="productdescription">
-                                <p class="producttitle"><a href="product.php">Title</a></p>
-                                <p class="price">$price</p>
-                                <p class="userId">ham8821</p>
-                                </div>
-
-                             </div>
-                      </div>
+              <br>
+              <section id="product">
+                  <br>
+  <center>  <h2>Products</h2>  </center>
+  <div class="container">
+      <div class="row" id="contentbox">
+        
      
-                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">                  
-                          <div class="contentbox">
-                          <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                          <div class="productdescription">
-                              <p class="producttitle"><a href="product.php">Title</a></p>
-                              <p class="price">$price</p>
-                              <p class="userId">ham8821</p>
-                              </div>
-                           </div>  
-                      </div>
+<!-- sellecting the colums to show the data on the screen -->
+  <?php
 
-                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                          <div class="contentbox">
-                              <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                              <div class="productdescription">
-                                  <p class="producttitle"><a href="product.php">Title</a></p>
-                                  <p class="price">$price</p>
-                                  <p class="userId">ham8821</p>
-                                  </div>
-    
-                               </div>
-                      </div>
-
-                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                        
-                          <div class="contentbox">
-                          <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                          <div class="productdescription">
-                              <p class="producttitle"><a href="product.php">Title</a></p>
-                              <p class="price">$price</p>
-                              <p class="userId">ham8821</p>
-                              </div>
-
-                           </div>
-                    </div>
-   
-                    <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">                  
-                        <div class="contentbox">
-                        <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                        <div class="productdescription">
-                            <p class="producttitle"><a href="product.php">Title</a></p>
-                            <p class="price">$price</p>
-                            <p class="userId">ham8821</p>
-                            </div>
-                         </div>  
-                    </div>
-
-                    <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                        <div class="contentbox">
-                            <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                            <div class="productdescription">
-                                <p class="producttitle"><a href="product.php">Title</a></p>
-                                <p class="price">$price</p>
-                                <p class="userId">ham8821</p>
-                                </div>
+    $connect = mysqli_connect("localhost","root","","sup");
+    $sql="SELECT imgSRC,productName, price, postDate, sellerID FROM products";
+    $result = mysqli_query($connect,$sql);
+    // put fetched data in to each row
+    $row= mysqli_fetch_all($result); 
   
-                             </div>
-                    </div>
+    //the number of row in database
+    for ($a = 0; $a < count($row); $a++) {
+       
 
-                    <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                        
-                        <div class="contentbox">
-                        <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                        <div class="productdescription">
-                            <p class="producttitle"><a href="product.php">Title</a></p>
-                            <p class="price">$price</p>
-                            <p class="userId">ham8821</p>
-                            </div>
-
-                         </div>
-                  </div>
- 
-                  <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">                  
-                      <div class="contentbox">
-                      <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                      <div class="productdescription">
-                          <p class="producttitle"><a href="product.php">Title</a></p>
-                          <p class="price">$price</p>
-                          <p class="userId">ham8821</p>
-                          </div>
-                       </div>  
-                  </div>
-
-                  <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                      <div class="contentbox">
-                          <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                          <div class="productdescription">
-                              <p class="producttitle"><a href="product.php">Title</a></p>
-                              <p class="price">$price</p>
-                              <p class="userId">ham8821</p>
-                              </div>
-
-                           </div>
-                  </div>
-                  <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                        
-                      <div class="contentbox">
-                      <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                      <div class="productdescription">
-                          <p class="producttitle"><a href="product.php">Title</a></p>
-                          <p class="price">$price</p>
-                          <p class="userId">ham8821</p>
-                          </div>
-
-                       </div>
-                </div>
-
-                <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">                  
-                    <div class="contentbox">
-                    <img src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                    <div class="productdescription">
-                        <p class="producttitle"><a href="product.php">Title</a></p>
-                        <p class="price">$price</p>
-                        <p class="userId">ham8821</p>
-                        </div>
-                     </div>  
-                </div>
-
-            
-                </div>
-                 </div>
-
-              </div>
+        //and start to attach one by one
+        //4 products per row
+        echo "<div class='productinfo'>";
+       
+        //image of a product
+        $imgpath = 'images/';
+        echo "<div class='image-fluid' style='width: 280px; max-width=270px; height:200px; background-image: url(".$imgpath.$row[$a][0].")'>";
+        echo "</div>";
 
 
- -->
+        //Product Name
+        //echo "<div class='text-center'>";
+        echo "<p>".$row[$a][1]."</p>";
+        
 
-              </section>
+        //Product Price
+        //echo "<div class='text-center'>";
+        echo "<span>".$row[$a][2]."</span> <span>$</span>";
+     
+        //Product posted date
+       // echo "<div class='text-center'>";
+        echo "<p>".$row[$a][3]."</p>";
+       
+        //Product seller ID
+
+       // echo "<div class='text-center'>";
+       // echo "<p>".$row[$a][4]."</p>";
+        // echo "<button type="button" class="btn btn-info">DELETE</button>" ;
+
+       
+        // $productnum = $a + 1;
+        // $modulus = $productnum % 4;
+        // $modulus2 = $productnum % 2;
+        // if ($modulus = 0 || $modulus2=0) {
+            echo "</div>";//a1
+        // }
+
+    }
+    
+
+  ?>
+    
+  </div>
+</div>
+
+              
+</section>
 </body>
 </html>

@@ -45,7 +45,7 @@
                     </li>
         
                     <li class="nav-item">
-                        <a class="nav-link" href="myproduct.php">My Product</a>
+                        <a class="nav-link" href="addProduct/myproduct.php">My Product</a>
                       </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="myFunction(); return false">Service hour</a>
@@ -105,6 +105,7 @@
                                         <span>Name:  <?php echo $_SESSION['firstName']  ?> </span><span><?php echo $_SESSION['lastName']  ?> </span><br>
                                         <span>Address:  <?php echo $_SESSION['address'] ?> </span><br>
                                         <span>Inbox:  <a href="#">0 mailbox</a></span><br>
+                                        <span>User ID:  <?php echo $_SESSION['userID']  ?></span><br>
                                         <span>Credit card:  <a href="#addingcredit">Click here to add it!</a> </span>
                                         </div>
                                     </div>

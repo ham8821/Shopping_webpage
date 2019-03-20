@@ -87,8 +87,8 @@
                                           <div class="card">
                                             <div class="card-header">
                                             
-                                              <h4>WELCOME <?php echo $_SESSION['email'] ?> </h4>
-                                             <button type="button" class="btn btn-brown"><a href="logout.php"> LOG OUT</a></button>
+                                           <div>   <h4>WELCOME <?php echo $_SESSION['email'] ?> </h4></div>
+                                             <button type="button" class="btn btn-brown" id="logoutbutton"><a href="logout.php"> LOG OUT</a></button>
 
                                               <div class="d-flex justify-content-end social_icon">
                                     
