@@ -87,8 +87,9 @@
                                           <div class="card">
                                             <div class="card-header">
                                             
-                                              <h3>WELCOME <?php echo $_SESSION['email'] ?> </h3>
-                                              <br>
+                                              <h4>WELCOME <?php echo $_SESSION['email'] ?> </h4>
+                                             <button type="button" class="btn btn-brown"><a href="logout.php"> LOG OUT</a></button>
+
                                               <div class="d-flex justify-content-end social_icon">
                                     
                                                 <span><a href="https://www.facebook.com/">

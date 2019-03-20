@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE php>
 <php lang="en">
 <head>
@@ -130,16 +134,16 @@
                  <div class="row">
                       
                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                            <div class="contentbox">
-                            <img src="images/laptop1.jpg" alt="laptopphoto" class="pic">
-                                <div class="productdescription">
-                                <p class="producttitle"><a href="product.php">Good condition laptop SALE!!</a></p>
-                                <p class="price">$500</p>
-                                <p class="userId">ham8821</p>
-                                </div>
+                                <div class="contentbox">
+                                <img src="images/laptop1.jpg" alt="laptopphoto" class="pic">
+                                <iframe onload="loadingproducts();" src="/default.asp"></iframe>
+
+                                <p id="demo"></p>
+
+
                             </div>
                       </div>
-
+<!-- 
                       <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
                         
                             <div class="contentbox">
@@ -278,7 +282,7 @@
               </div>
 
 
-
+ -->
 
               </section>
 </body>

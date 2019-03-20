@@ -1,0 +1,55 @@
+.useremail{
+    float: right;
+    font-size: 20px;
+
+}
+.uploadbox{
+  margin-left: 940px;
+}
+.overlay{
+   background-color: rgba(252, 163, 17, 1);
+}
+
+.header .navbar-default {
+  background-color:transparent !important;
+  border-color:transparent;
+  background-image:none;
+  box-shadow:none;	
+  }
+
+  .header .navbar-toggle {
+      margin:10px 0; 
+      background:#36C; 
+      color: black;
+  }
+  .navbar-default {
+    background-color:transparent !important;
+    border-color:transparent;
+    background-image:none;
+    box-shadow:none;	
+    }
+  .mynavbar{
+    background-color: transparent; 
+  }
+  .nav-link{
+    color: black !important;
+    font-size: 18px;
+  }
+  .nav-item{
+    padding-left: 10px;
+    padding-right:10px;
+  }
+  .navbar-nav{
+    text-align: center !important;
+  }
+  .context-dark, .bg-gray-dark, .bg-primary {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .nav-list li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+.navbar-nav{
+    color: transparent! important;
+}

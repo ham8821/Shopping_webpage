@@ -14,7 +14,7 @@
       
 
  $sql="INSERT INTO usercc (userID, Ccnumber, Vdate, Nameoncard, CVV)
-                VALUES ($userID, $Ccnumber, $Vdate,'$Nameoncard', $CVV)";
+                VALUES ($userID, $Ccnumber, '$Vdate','$Nameoncard', $CVV)";
 
         $result = mysqli_query($db,$sql);
 
