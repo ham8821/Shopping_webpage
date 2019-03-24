@@ -28,5 +28,8 @@
        } 
        $db-> close();
 
+
+      $_SESSION['Ccnumber']=$Ccnumber;
+      
        ?>
 

@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 
 <!DOCTYPE php>
@@ -183,6 +184,9 @@ session_start();
         // $modulus = $productnum % 4;
         // $modulus2 = $productnum % 2;
         // if ($modulus = 0 || $modulus2=0) {
+          echo "<form method='POST' action='include/addtocart.php'>";
+         echo "<input type='submit' name='add_to_cart' style='margin-top:5px;' class='btn btn-success' value='Add to Cart' /> "; 
+         echo"</form>";
             echo "</div>";//a1
         // }
 
