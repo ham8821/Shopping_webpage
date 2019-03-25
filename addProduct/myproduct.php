@@ -90,7 +90,7 @@
                     Choose the category:
                     </div>
                     <div class="dropdown col-xm-6 col-sm-6 col-md-6 col-lg-6 text-left">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" onclick=getcategory();>
                         <a class="categorydrop" id="cl">Category list</a>
                         </button>
                         <input type="hidden" id="categoryid" name="categoryid"/>
@@ -104,7 +104,7 @@
                     Choose a subcategory:
                     </div>
                     <div class="dropdown col-xm-6 col-sm-6 col-md-6 col-lg-6 text-left">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" >
                         <a class="categorydrop" id="scl">Subcategory list</a>
                         </button>
                         <input type="hidden" id="subcategoryid" name="subcategoryid"/>

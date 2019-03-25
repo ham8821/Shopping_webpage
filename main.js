@@ -294,7 +294,7 @@ function addcreditcard1() {
 
     }
 //add to product modal start
-    window.onload = getcategory();
+   // window.onload = getcategory();
 
 function getcategory () {
     document.getElementById("cl").innerHTML = 'Choose category';
@@ -308,12 +308,12 @@ function getcategory () {
             // cleanSeats();
         }
     };
-    xmlhttp.open("GET", "uploadtest/category_drop.php", true);
+    xmlhttp.open("GET", "../uploadtest/category_drop.php", true);
     xmlhttp.send();
 }
 
 function getsubcategory(cid, val) {
-    // alert(val);
+    //alert(val);
     document.getElementById("cl").innerHTML = val;
     document.getElementById("categoryid").value = cid;
     var xmlhttp = new XMLHttpRequest();
@@ -324,7 +324,7 @@ function getsubcategory(cid, val) {
             
         }
     };
-    xmlhttp.open("GET", "uploadtest/subcategory_drop.php?cid="+cid, true);
+    xmlhttp.open("GET", "../uploadtest/subcategory_drop.php?cid="+cid, true);
     xmlhttp.send();
 }
 
