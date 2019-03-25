@@ -83,7 +83,7 @@
            
                                 <div id="Home" class="tabcontent">
                                 <img class="mainpic" src="images/shoes.jpg" alt="accountmain">
-                                  <a href="#mycart"><i id="pointbutton" class="fa fa-angle-double-down"  >Go to my cart</i></a>
+                                  <a href="addcartitem/index.php"><i id="pointbutton" class="fa fa-angle-double-down"  >Go to my cart</i></a>
                                 </div>
 
 
@@ -259,177 +259,10 @@
 
 <!----------------------------------------------------- my product list -------------------------------------------------------------->
 <br>
-<section id="mycart">
-    <br><br>
-   <center> <h3> My Cart </h3></center>
-    <br><br>
-                <div class="container">
-                 <div class="row">
-                      
-                     <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                     <input type="checkbox" class="checkbox" name="select" value="select">
-                            <div class="contentbox">
-                            <img class="img-fluid" src="images/laptop1.jpg" alt="laptopphoto" class="pic">
-                                <div class="productdescription">
-                                <p class="producttitle"><a href="product.php">Good condition laptop SALE!!</a></p>
-                                <p class="price">$500</p>
-                                <p class="userId">ham8821</p>
-                                </div>
-                            </div>
-                      </div>
 
-                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                      <input type="checkbox" class="checkbox" name="select" value="select">
-                            <div class="contentbox">
-                            <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                            <div class="productdescription">
-                                <p class="producttitle"><a href="product.php">Title</a></p>
-                                <p class="price">$price</p>
-                                <p class="userId">ham8821</p>
-                                </div>
-
-                             </div>
-                      </div>
-     
-                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">   
-                      <input type="checkbox" class="checkbox" name="select" value="select">               
-                          <div class="contentbox">
-                          <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                          <div class="productdescription">
-                              <p class="producttitle"><a href="product.php">Title</a></p>
-                              <p class="price">$price</p>
-                              <p class="userId">ham8821</p>
-                              </div>
-                           </div>  
-                      </div>
-
-                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                      <input type="checkbox" class="checkbox" name="select" value="select">
-                          <div class="contentbox">
-                              <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                              <div class="productdescription">
-                                  <p class="producttitle"><a href="product.php">Title</a></p>
-                                  <p class="price">$price</p>
-                                  <p class="userId">ham8821</p>
-                                  </div>
-    
-                               </div>
-                      </div>
-
-                      <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                      <input type="checkbox" class="checkbox" name="select" value="select">
-                          <div class="contentbox">
-                          <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                          <div class="productdescription">
-                              <p class="producttitle"><a href="product.php">Title</a></p>
-                              <p class="price">$price</p>
-                              <p class="userId">ham8821</p>
-                              </div>
-
-                           </div>
-                    </div>
-   
-                    <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">  
-                    <input type="checkbox" class="checkbox" name="select" value="select">                
-                        <div class="contentbox">
-                        <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                        <div class="productdescription">
-                            <p class="producttitle"><a href="product.php">Title</a></p>
-                            <p class="price">$price</p>
-                            <p class="userId">ham8821</p>
-                            </div>
-                         </div>  
-                    </div>
-
-                    <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                    <input type="checkbox" class="checkbox" name="select" value="select">
-                        <div class="contentbox">
-                            <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                            <div class="productdescription">
-                                <p class="producttitle"><a href="product.php">Title</a></p>
-                                <p class="price">$price</p>
-                                <p class="userId">ham8821</p>
-                                </div>
-  
-                             </div>
-                    </div>
-
-                    <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                    <input type="checkbox" class="checkbox" name="select" value="select">
-                        <div class="contentbox">
-                        <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                        <div class="productdescription">
-                            <p class="producttitle"><a href="product.php">Title</a></p>
-                            <p class="price">$price</p>
-                            <p class="userId">ham8821</p>
-                            </div>
-
-                         </div>
-                  </div>
- 
-                  <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">     
-                  <input type="checkbox" class="checkbox" name="select" value="select">             
-                      <div class="contentbox">
-                      <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                      <div class="productdescription">
-                          <p class="producttitle"><a href="product.php">Title</a></p>
-                          <p class="price">$price</p>
-                          <p class="userId">ham8821</p>
-                          </div>
-                       </div>  
-                  </div>
-
-                  <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                  <input type="checkbox" class="checkbox" name="select" value="select">
-                      <div class="contentbox">
-                          <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                          <div class="productdescription">
-                              <p class="producttitle"><a href="product.php">Title</a></p>
-                              <p class="price">$price</p>
-                              <p class="userId">ham8821</p>
-                              </div>
-
-                           </div>
-                  </div>
-                  <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">
-                  <input type="checkbox" class="checkbox" name="select" value="select">
-                      <div class="contentbox">
-                      <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                      <div class="productdescription">
-                          <p class="producttitle"><a href="product.php">Title</a></p>
-                          <p class="price">$price</p>
-                          <p class="userId">ham8821</p>
-                          </div>
-
-                       </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-3 col-xl-3">     
-                  <input type="checkbox" class="checkbox" name="select" value="select">             
-                      <div class="contentbox">
-                      <img class="img-fluid" src="images/sampleimg.jpg" alt="samplepic" class="pic">
-                      <div class="productdescription">
-                          <p class="producttitle"><a href="product.php">Title</a></p>
-                          <p class="price">$price</p>
-                          <p class="userId">ham8821</p>
-                          </div>
-                       </div>  
-                  </div>
-             
-
-            
-                </div>
-                <hr>
-                <center><button type="button" class="btn btn-warning">Check out</button></center>
-                <br> <br>
-
-                 </div>
-
-              </div>
-
-
-
-
-              </section>
+             </div>
+         </div>
+    </section>
 <section>
 
 

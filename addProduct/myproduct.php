@@ -172,7 +172,7 @@
   <?php
     $sellerID= $_SESSION['userID'];
     $connect = mysqli_connect("localhost","root","","sup");
-    $sql="SELECT imgSRC,productName, price, postDate, sellerID FROM products WHERE sellerID='".$sellerID."'";
+    $sql="SELECT postID,imgSRC,productName, price, postDate, sellerID FROM products WHERE sellerID='".$sellerID."'";
    
 
     $result = mysqli_query($connect,$sql);
@@ -186,26 +186,30 @@
         //and start to attach one by one
         //4 products per row
         echo "<div class='productinfo'>";
-       
+        echo "<form action='deletefrommyproduct.php' method='POST'>";
+        echo "<input type='hidden' name='postIDbox' value='".$row[$a][0]."' >";
+
+       // $postID=$_POST['postIDbox'];
         //image of a product
         $imgpath = '../images/';
-        echo "<div class='image-fluid' style='width: 280px; max-width=270px; height:200px; background-image: url(".$imgpath.$row[$a][0].")'>";
+        echo "<div class='image-fluid' style='width: 280px; max-width=270px; height:200px; background-image: url(".$imgpath.$row[$a][1].")'>";
         echo "</div>";
 
 
         //Product Name
         //echo "<div class='text-center'>";
-        echo "<p>".$row[$a][1]."</p>";
+        echo "<p>".$row[$a][2]."</p>";
         
 
         //Product Price
         //echo "<div class='text-center'>";
-        echo "<span>".$row[$a][2]."</span> <span>$</span>";
+        echo "<span>".$row[$a][3]."</span> <span>$</span>";
      
         //Product posted date
        // echo "<div class='text-center'>";
-        echo "<p>".$row[$a][3]."</p>"; echo "<button type='button' class='btn btn-secondary btn-sm'>DELETE</button>";
-       
+        echo "<p>".$row[$a][4]."</p>"; 
+        echo "<button type='submit' name='submit' class='btn btn-secondary btn-sm'>DELETE</button>";
+        echo "</form>";
         //Product seller ID
 
        // echo "<div class='text-center'>";
@@ -227,7 +231,6 @@
     
   </div>
 </div>
-
               
 </section>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

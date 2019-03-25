@@ -17,11 +17,11 @@
   box-shadow:none;	
   }
 
-  .header .navbar-toggle {
+  /* .header .navbar-toggle {
       margin:10px 0; 
       background:#36C; 
       color: black;
-  }
+  } */
   .navbar-default {
     background-color:transparent !important;
     border-color:transparent;
@@ -50,6 +50,11 @@
     padding-top: 5px;
     padding-bottom: 5px;
   }
-.navbar-nav{
+/* .navbar-nav{
     color: transparent! important;
 }
+
+  .navbar-toggler{
+    background-color:  rgba(252, 163, 17, 1)! important;
+    color:  rgba(252, 163, 17, 1)! important;
+} */

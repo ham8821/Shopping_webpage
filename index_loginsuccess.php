@@ -86,7 +86,7 @@
                                         <div class="d-flex justify-content-center h-100" id= "formbox">
                                           <div class="card">
                                             <div class="card-header">
-                                            
+                                            <br>
                                            <div>   <h4>WELCOME <?php echo $_SESSION['email'] ?> </h4></div>
                                              <button type="button" class="btn btn-brown" id="logoutbutton"><a href="logout.php"> LOG OUT</a></button>
 
@@ -231,7 +231,7 @@
                                   <p id="failure">Opss.. something went wrong.</p>  
                                   <p id="success">Thank you, your message was sent successfully.</p>
                                   <div class="wrapper">
-                                  <form method="post" action="emailForm.php" onsubmit="return contactusValid()">  
+                                  <form method="post" >  
                                       <label for="FirstName">First Name: <span class="required" >*</span></label>  
                                       <input type="text" id="name1" name="name" value="" placeholder="Your first name" required="required" autofocus="autofocus" />  
                                       <label for="LasttName">Last Name: <span class="required">*</span></label>  

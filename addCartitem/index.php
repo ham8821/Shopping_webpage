@@ -6,11 +6,11 @@
       if(isset($_SESSION["shopping_cart"]))  
       {  
            $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");  
-           if(!in_array($_GET["id"], $item_array_id))  
+           if(!in_array($_GET["postID"], $item_array_id))  
            {  
                 $count = count($_SESSION["shopping_cart"]);  
                 $item_array = array(  
-                     'item_id'               =>     $_GET["id"],  
+                     'item_id'               =>     $_GET["postID"],  
                      'item_name'               =>     $_POST["hidden_name"],  
                      'item_price'          =>     $_POST["hidden_price"],  
                      'item_quantity'          =>     $_POST["quantity"]  
@@ -20,13 +20,13 @@
            else  
            {  
                 echo '<script>alert("Item Already Added")</script>';  
-                echo '<script>window.location="index.php"</script>';  
+                //echo '<script>window.location="index.php"</script>';  
            }  
       }  
       else  
       {  
            $item_array = array(  
-                'item_id'               =>     $_GET["id"],  
+                'item_id'               =>     $_GET["postID"],   
                 'item_name'               =>     $_POST["hidden_name"],  
                 'item_price'          =>     $_POST["hidden_price"],  
                 'item_quantity'          =>     $_POST["quantity"]  
@@ -40,7 +40,7 @@
       {  
            foreach($_SESSION["shopping_cart"] as $keys => $values)  
            {  
-                if($values["item_id"] == $_GET["id"])  
+                if($values["item_id"] == $_GET["postID"])  
                 {  
                      unset($_SESSION["shopping_cart"][$keys]);  
                      echo '<script>alert("Item Removed")</script>';  
@@ -59,6 +59,15 @@
            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
            <script  src="../main.js" type="text/javascript"></script>
  
+
+          <link rel="stylesheet" href="../Css/myproduct.css">
+          <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <link href="https://fonts.googleapis.com/css?family=Lora|Roboto" rel="stylesheet">   
+
+
+
+
   <style>
   #load{
      height: 33px;
@@ -68,9 +77,37 @@
   </style>
       </head>  
       <body>  
+      <section class="header">
+		<div class="overlay">
+			<nav class="navbar navbar-expand-lg navbar-light mynavbar">
+				<a class="navbar-brand" id="navbar" href="#">Thrifters</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item active">
+							<a class="nav-link" href="../index.php">Home 
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../myaccount.php">My account</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#" onclick="myFunction(); return false">Service hour</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</section>
            <br />  
-           <div class="container" style="width:700px;">  
-                <h3 align="center">My Shopping Cart</h3><br /> 
+           <div class="container">  
+                
+                 <h3 align="center">My Shopping Cart</h3><br /> 
+                 <center><?php echo "HI,".$_SESSION['email']."!" ?></center>
+                 <br>
                 <?php  
                 $connect = mysqli_connect("localhost", "root", "", "sup");   
 
@@ -82,9 +119,9 @@
                      {         $mycartID= $row[5];
                 ?>  
         
-                <div class="col-md-4">  
+                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">  
                      <form method="post" action="index.php?action=add&postID=<?php echo $row["postID"]; ?>">  
-                          <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px; height: 300px;" align="center">  
+                          <div style="border:1px solid #333; background-color:#f1f1f1; border-radius:5px; padding:16px; margin: 20px 10px; height: 300px;" align="center">  
                                <img style="max-width: 100%; max-height: 110px;" src="../images/<?php echo $row["photoSRC"]; ?>" class="img-responsive" /><br />  
                                <h4 class="text-info"><?php echo $row["productName"]; ?></h4>  
                                <h4 class="text-danger">$ <?php echo $row["confirmedPrice"]; ?></h4>  
@@ -140,9 +177,9 @@
                           ?>  
 
                      </table>  
-                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" >
+                     <center><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong" >
                               Check Out
-                              </button>
+                              </button></center>
                               <!--  that button above will trigger this message down below -->
                               <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
                               <div class="modal-dialog" role="document">

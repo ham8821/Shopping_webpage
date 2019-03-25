@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lora|Roboto" rel="stylesheet">   
    
-    <title>testing page</title>
+    <title>Home page</title>
 </head>
 
 
@@ -247,7 +247,7 @@
                                   <p id="failure">Opss.. something went wrong.</p>  
                                   <p id="success">Thank you, your message was sent successfully.</p>
                                   <div class="wrapper">
-                                  <form method="post" action="emailForm.php" onsubmit="return contactusValid()">  
+                                  <form method="post">  
                                       <label for="FirstName">First Name: <span class="required" >*</span></label>  
                                       <input type="text" id="name1" name="name" value="" placeholder="Your first name" required="required" autofocus="autofocus" />  
                                       <label for="LasttName">Last Name: <span class="required">*</span></label>  
