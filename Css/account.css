@@ -26,7 +26,7 @@ html, body{
     height: 100%;
     margin:0px 0px;
     padding: 0 0;
-  } */
+  }
  
 #mainbox{
  text-align: center;
@@ -135,4 +135,18 @@ html, body{
  display: inline;
  
 }
-\
+
+/* --------------add product modalk------------------------- */
+.categorydrop a {
+  text-decoration: none;
+  color: white;
+}
+
+.categorydrop a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.modalrow {
+  margin-top:10px;
+}

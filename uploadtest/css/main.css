@@ -1,0 +1,13 @@
+.categorydrop a {
+    text-decoration: none;
+    color: white;
+}
+
+.categorydrop a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.modalrow {
+    margin-top:10px;
+}

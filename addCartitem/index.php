@@ -74,7 +74,7 @@
                 <?php  
                 $connect = mysqli_connect("localhost", "root", "", "sup");   
 
-                $query = "SELECT mycartitem.postID, mycartitem.confirmedPrice, productimgs.photoSRC, products.productName, products.Price, mycart.mycartID FROM mycartitem, productimgs, products, mycart WHERE products.postID = productimgs.postID and products.postID = mycartitem.postID";  
+                $query = "SELECT mycartitem.postID, mycartitem.confirmedPrice, productimgs.photoSRC, products.productName, products.Price, mycartitem.mycartID FROM mycartitem, productimgs, products WHERE products.postID = productimgs.postID and products.postID = mycartitem.postID";  
                 $result = mysqli_query($connect, $query);  
                 if(!$result ||mysqli_num_rows($result) > 0)  
                 {  
@@ -156,7 +156,7 @@
                                    <div class="modal-body">
                                    <?php require_once('../dbconnection.php'); ?>
 
-                                   <form action="charge.php" method="post">
+                                   <form action="" method="post">
                                         <h3>Hi <?php echo $_SESSION['email'] ?>! </h3>
                                         <p> <b> Please double check your order details before you proceed! </b></p>
                                         <p>Full Name: <?php echo $_SESSION['firstName'],$_SESSION['lastName'] ?> </p>
@@ -164,7 +164,7 @@
                                         <hr>
                                         <!-- payment method selection -->
                                         <span><div class="selection"><b> Please select your payment method </p>
-                                        <select name="paymentmethod" id="paymentmethod" style="width: 200px">
+                                        <select name="paymentmethod" id="paymentmethod" style="width: 200px" onchange="getselectvalue();">
                                         <option value="cc">Credit Card</option>
                                         <option value="cod">Cash on delivery</option>
                                         <input type="submit" name="show_dowpdown_value" value="Select" style="background-color: black; color:white;"/>
@@ -195,7 +195,7 @@
                                         ?>
 
                                         </select>
-                                        <input type="submit" name="show_dowpdown_value" value="Select" style="background-color: black; color:white;"/>
+                                        <input type="submit" name="show_dowpdown_value2" value="Select" style="background-color: black; color:white;"/>
                                         </div></span>
                                         <label>
                                              I accept the terms of service.
@@ -206,7 +206,7 @@
                                    </div>
                                    <div class="modal-footer">
                                    <button class="btn btn-secondary" data-dismiss="modal">Go back to cart</button>
-                                   <button type="button" class="btn btn-primary btn-lg " id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" onclick="payment();">Pay Now</button>
+                                   <button type="button" name= "getvaluebutton" class="btn btn-primary btn-lg " id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" onclick="payment();">Pay Now</button>
                                    </div>
                               </div>
                               </div>
@@ -216,23 +216,37 @@
            </div>  
            <br>  
            <script>
+               function getselectvalue(){
+                    <?php
+                                   
+                                        $selected_val = $_POST['paymentmethod'];  // Storing Selected Value In Variable
+                                        //echo "You have selected :" .$selected_val;
+                                        
+                                        ?>
+
+               }
                function payment(){
                   <?php
+               //    To check the error--------------------------------------------------------------------------------------------------
+               //    ini_set('display_errors',1);
+               //    error_reporting(E_ALL);
+                     $selected_val = $_POST['paymentmethod']; 
                      $connect = mysqli_connect("localhost", "root", "", "sup");   
-                     $sql="INSERT INTO payment (`date`, `mycartID`, `amount`) VALUES (now(),'$mycartID','$total')";
-                     $result = mysqli_query($connect, $sql);  
+                     $sql="INSERT INTO payment (`type`,`date`, `mycartID`, `amount`) VALUES ('$selected_val',now(),$mycartID,$totalprice)";
+                     $result = mysqli_query($connect, $sql); 
+                      
                      if($result === true){
-                         echo '<script language="javascript">';
-                         echo 'alert("Your payment has been completed!")';
-                         echo '</script>';
+                       //  echo '<script language="javascript">';
+                         echo "alert('Your payment has been completed!')";
+                        // echo '</script>';
                          //   header('Location: ../myaccount.php');
                         }else{
-                         echo '<script language="javascript">';
-                         echo 'alert("failed")';
-                         echo '</script>';
+                         //echo '<script language="javascript">';
+                         echo "alert('failed')";
+                         //echo '</script>';
                             
                         } 
-                        $connect-> close();
+                        //$connect-> close();
                   ?>
                }
                
