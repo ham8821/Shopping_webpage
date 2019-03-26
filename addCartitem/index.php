@@ -116,6 +116,7 @@
                 {  
                      while($row = mysqli_fetch_array($result))  
                      {         $mycartID= $row[5];
+                               
                 ?>  
         
                 <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">  
@@ -160,7 +161,7 @@
                                <td>$ <?php echo $values["item_price"]; ?></td>  
                                <td>$ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2); ?></td>  
                                <td><a href="index.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>  
-                              <?php $totalprice= number_format($values["item_quantity"] * $values["item_price"], 2); ?>
+                          
                           </tr>  
                           <?php  
                                     $total = $total + ($values["item_quantity"] * $values["item_price"]);  
@@ -168,8 +169,8 @@
                           ?>  
                           <tr>  
                                <td colspan="3" align="right">Total</td>  
-                               <td align="right">$ <?php echo number_format($total, 2); ?></td>  
-                            
+                               <td align="right">$ <?php echo "<p id='totalpricetd'>".$total."</p>"; ?></td>  
+
                           </tr>  
                           <?php  
                           }  
@@ -192,7 +193,7 @@
                                    <div class="modal-body">
                                    <?php require_once('../dbconnection.php'); ?>
 
-                                   <form action="payment.php" method="post">
+                                   <form action="../payment.php" method="post">
                                        
                                         <p> <b> Please double check your order details before you proceed! </b></p>
                                         <p>Full Name: <?php echo $_SESSION['firstName'],$_SESSION['lastName'] ?> </p>
@@ -200,10 +201,14 @@
                                         <hr>
                                         <!-- payment method selection -->
                                         <span><div class="selection"><b> Please select your payment method </p>
-                                        <select name="paymentmethod" id="paymentmethod" style="width: 200px" >
+                                        <select name="paymentmethod" id="paymentmethod" style="width: 200px" onchange="getselectvalue(this.value)">
                                         <option value="cc">Credit Card</option>
                                         <option value="cod">Cash on delivery</option>
-                                        <input type="submit" name="show_dowpdown_value" value="Select" style="background-color: black; color:white;"/>
+                                        
+                                        <input type='hidden' name='totalpricebox' id='totalpricebox' value='<?php echo $toatlprice ?>' >
+                                        <input type='hidden' name='mycartIDbox' id='mycartIDbox' value='<?php echo $mycartID ?>' >
+                                        
+                                        <input type="submit" name="show_dowpdown_value" value="Select" style="background-color: black; color:white;" />
                                         </select></div></span>
                                    
                                         <!-- payment card number selection -->
@@ -235,14 +240,14 @@
                                         </div></span>
                                         <label>
                                              I accept the terms of service.
-                                             <input type="checkbox" name="terms_of_service" require value="Y">
+                                             <input type="checkbox" name="terms_of_service" required value="Y">;
                                         </label>
 
                                    </form>
                                    </div>
                                    <div class="modal-footer">
                                    <button class="btn btn-secondary" data-dismiss="modal">Go back to cart</button>
-                                   <button type="button" name= "getvaluebutton" class="btn btn-primary btn-lg " id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" onclick="paymentajax();">Pay Now</button>
+                                   <button type="button" name= "getvaluebutton" class="btn btn-primary btn-lg " id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order">Pay Now</button>
                                    </div>
                               </div>
                               </div>
@@ -251,21 +256,7 @@
                 </div>  
            </div>  
            <br>  
-           <script>
-               // function getselectvalue(var selected_val){
-               //     // $_POST['paymentmethod'];
-                                 
-               //                          var selected_val = document.getElementById("paymentmethod").value;  // Storing Selected Value In Variable
-               //                          //echo "You have selected :" .$selected_val;
-               //                           window.location.href="../payment.php?selected_val=selected_val";
-                                        
-
-               // }
-               
-               
-
-
-           </script>
+      
 
       </body>  
  </html>

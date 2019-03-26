@@ -356,22 +356,35 @@ function deleteproduct(){
 }
 
 //payment ajax....annoying.....
-function paymentajax(){
+ function getselectvalue(val){
+                   // $_POST['paymentmethod'];
+  
+        document.getElementById("load").setAttribute("onClick","paymentajax('"+val+"')");  // Storing Selected Value In Variable
+         alert (selected_val);
+           return  selected_val;             
+               }
+//var selected_val = document.getElementById("paymentmethod").value;
+// alert (selected_val);
+function paymentajax(val){
+  var totalprice = document.getElementById("totalpricetd").innerHTML;
+  var mycartID = document.getElementById("mycartIDbox").value;
+  var selected_val = val;
+  // alert (totalprice);
+  // alert (mycartID);
   var xmlhttp = new XMLHttpRequest();
   xmlhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
           console.log(xmlhttp);
           // document.getElementById("subcategorydropitem").innerHTML = xmlhttp.response;
           if(xmlhttp.responseText == 1){
-            //alert('item removed!');
-            document.getElementById("paymentmethod").value=selected_val;
+              alert ("successed")
              }
              else{
               // alert('failed!');
              }
       }
   };
-  xmlhttp.open("GET", "../payment.php?selected_val="+selected_val, true);
+  xmlhttp.open("GET", "../payment.php?selected_val="+selected_val+ "&totalprice="+totalprice+"&mycartID="+mycartID, true);
   xmlhttp.send();
 
 }
