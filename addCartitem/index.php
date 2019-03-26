@@ -40,12 +40,11 @@
       {  
            foreach($_SESSION["shopping_cart"] as $keys => $values)  
            {  
-                if($values["item_id"] == $_GET["postID"])  
-                {  
+               
                      unset($_SESSION["shopping_cart"][$keys]);  
                      echo '<script>alert("Item Removed")</script>';  
                      echo '<script>window.location="index.php"</script>';  
-                }  
+                
            }  
       }  
  }  
@@ -170,7 +169,7 @@
                           <tr>  
                                <td colspan="3" align="right">Total</td>  
                                <td align="right">$ <?php echo number_format($total, 2); ?></td>  
-                               <td></td>  
+                            
                           </tr>  
                           <?php  
                           }  
@@ -185,7 +184,7 @@
                               <div class="modal-dialog" role="document">
                               <div class="modal-content">
                                    <div class="modal-header">
-                                   <h5 class="modal-title" id="exampleModalLongTitle">Your payment</h5>
+                                   <h3 class="modal-title" id="exampleModalLongTitle">Hi <?php echo $_SESSION['email'] ?>! </h3>
                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                    </button>
@@ -193,15 +192,15 @@
                                    <div class="modal-body">
                                    <?php require_once('../dbconnection.php'); ?>
 
-                                   <form action="" method="post">
-                                        <h3>Hi <?php echo $_SESSION['email'] ?>! </h3>
+                                   <form action="payment.php" method="post">
+                                       
                                         <p> <b> Please double check your order details before you proceed! </b></p>
                                         <p>Full Name: <?php echo $_SESSION['firstName'],$_SESSION['lastName'] ?> </p>
                                         <p>Address: <?php echo $_SESSION['address'] ?> </p>
                                         <hr>
                                         <!-- payment method selection -->
                                         <span><div class="selection"><b> Please select your payment method </p>
-                                        <select name="paymentmethod" id="paymentmethod" style="width: 200px" onchange="getselectvalue();">
+                                        <select name="paymentmethod" id="paymentmethod" style="width: 200px" >
                                         <option value="cc">Credit Card</option>
                                         <option value="cod">Cash on delivery</option>
                                         <input type="submit" name="show_dowpdown_value" value="Select" style="background-color: black; color:white;"/>
@@ -243,7 +242,7 @@
                                    </div>
                                    <div class="modal-footer">
                                    <button class="btn btn-secondary" data-dismiss="modal">Go back to cart</button>
-                                   <button type="button" name= "getvaluebutton" class="btn btn-primary btn-lg " id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" onclick="payment();">Pay Now</button>
+                                   <button type="button" name= "getvaluebutton" class="btn btn-primary btn-lg " id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processing Order" onclick="paymentajax();">Pay Now</button>
                                    </div>
                               </div>
                               </div>
@@ -253,39 +252,16 @@
            </div>  
            <br>  
            <script>
-               function getselectvalue(){
-                    <?php
-                                   
-                                        $selected_val = $_POST['paymentmethod'];  // Storing Selected Value In Variable
-                                        //echo "You have selected :" .$selected_val;
+               // function getselectvalue(var selected_val){
+               //     // $_POST['paymentmethod'];
+                                 
+               //                          var selected_val = document.getElementById("paymentmethod").value;  // Storing Selected Value In Variable
+               //                          //echo "You have selected :" .$selected_val;
+               //                           window.location.href="../payment.php?selected_val=selected_val";
                                         
-                                        ?>
 
-               }
-               function payment(){
-                  <?php
-               //    To check the error--------------------------------------------------------------------------------------------------
-               //    ini_set('display_errors',1);
-               //    error_reporting(E_ALL);
-                     $selected_val = $_POST['paymentmethod']; 
-                     $connect = mysqli_connect("localhost", "root", "", "sup");   
-                     $sql="INSERT INTO payment (`type`,`date`, `mycartID`, `amount`) VALUES ('$selected_val',now(),$mycartID,$totalprice)";
-                     $result = mysqli_query($connect, $sql); 
-                      
-                     if($result === true){
-                       //  echo '<script language="javascript">';
-                         echo "alert('Your payment has been completed!')";
-                        // echo '</script>';
-                         //   header('Location: ../myaccount.php');
-                        }else{
-                         //echo '<script language="javascript">';
-                         echo "alert('failed')";
-                         //echo '</script>';
-                            
-                        } 
-                        //$connect-> close();
-                  ?>
-               }
+               // }
+               
                
 
 

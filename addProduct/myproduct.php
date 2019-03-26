@@ -57,9 +57,7 @@
             <div class="contentbox col-12">                              
                         <img class="mainpic" src="../images/shopping1.jpg" alt="accountmain">
                         <a href="#myproduct"><i id="pointbutton" class="fa fa-angle-double-down"  >Go to my product</i></a>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                          Post Here
-                        </button>
+                        
                 </div>       
             </div>
      </div>
@@ -69,7 +67,7 @@
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Upload your product!!</h5>
+              <h4 class="modal-title" id="exampleModalLabel">YOUR POSTING</h4>
               <button type="button" class="close" data-dismiss="modal">
                 <span>&times;</span>
               </button>
@@ -81,7 +79,7 @@
                     Give a name to your merchandise:
                     </div>
                     <div class="col-xm-6 col-sm-6 col-md-6 col-lg-6 text-left">
-                        <input type="text" name="productName"/>
+                        <input type="text" name="productName" required/>
                     </div>
                 </div>
                 
@@ -119,7 +117,7 @@
                         How much is it:
                     </div>
                     <div class="col-xm-6 col-sm-6 col-md-6 col-lg-6 text-left">
-                        <input type="number" name="price"/>
+                        <input type="number" name="price" required/>
                     </div>
                 </div>
 
@@ -128,7 +126,7 @@
                     How many do you have:
                     </div>
                     <div class="col-xm-6 col-sm-6 col-md-6 col-lg-6 text-left">
-                        <input type="number" name="quantity"/>
+                        <input type="number" name="quantity" required/>
                     </div>
                 </div>
                 <!-- upload img here -->
@@ -137,7 +135,7 @@
                         Select image to upload:
                     </div>
                     <div class="col-xm-6 col-sm-6 col-md-6 col-lg-6 text-left">
-                        <input type="file" name="file[]" multiple />
+                        <input type="file" name="file[]" multiple required />
                     </div>
                 </div>
 
@@ -146,14 +144,14 @@
                         Put the description here:
                     </div>
                     <div class="col-xm-6 col-sm-6 col-md-6 col-lg-6 text-left">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required ></textarea>
                     </div>
                 </div>
 
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <input type="submit" class="btn btn-secondary" value="Upload Image" name="submit"/>
+              <input type="submit" class="btn btn-secondary" value="Upload" name="submit"/>
               <!-- <button type="submit" form="uploadimg" class="btn btn-primary"  name="submit">Submit</button> -->
             </div>
             </form>
@@ -163,11 +161,16 @@
 <!----------------------------------------------------- my product list -------------------------------------------------------------->
 <br>
 <section id="myproduct">
-  <center>  <h3>My Products</h3>  </center>
-  <div class="container">
-      <div class="row" id="contentbox">
-        
-     
+  <center>  <h3>My Products</h3>  
+            <span><img src="../images/upload.png" style width="30px" height="30px" alt="" class="uploadeicon"></span>
+            <span><button type="button" id="postbuttonbox" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="
+    margin: 15px; background-color: rgba(45, 147, 108, 1); border: none; margin-left:0;">
+            Post Here
+          </button></span></center>
+          <br><br>
+          <div class="container">
+              <div class="row" id="contentbox">
+  
 <!-- sellecting the colums to show the data on the screen -->
   <?php
     $sellerID= $_SESSION['userID'];
@@ -187,7 +190,7 @@
         //4 products per row
         echo "<div class='productinfo'>";
         echo "<form action='deletefrommyproduct.php' method='POST'>";
-        echo "<input type='hidden' name='postIDbox' value='".$row[$a][0]."' >";
+        echo "<input type='hidden' name='postIDbox' id='postIDbox' value='".$row[$a][0]."' >";
 
        // $postID=$_POST['postIDbox'];
         //image of a product
@@ -208,7 +211,8 @@
         //Product posted date
        // echo "<div class='text-center'>";
         echo "<p>".$row[$a][4]."</p>"; 
-        echo "<button type='submit' name='submit' class='btn btn-secondary btn-sm'>DELETE</button>";
+        echo "<button type='button' name='submit' class='btn btn-secondary btn-sm' onclick='deleteproduct()'>DELETE</button>";
+
         echo "</form>";
         //Product seller ID
 

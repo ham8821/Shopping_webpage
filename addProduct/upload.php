@@ -35,18 +35,18 @@
 function file_already_uploaded($file_name, $connect)
 {
  
- $query = "SELECT * FROM tbl_image WHERE image_name = '".$file_name."'";
- $statement = $connect->prepare($query);
- $statement->execute();
- $number_of_rows = $statement->rowCount();
- if($number_of_rows > 0)
- {
-  return true;
- }
- else
- {
-  return false;
- }
+        $query = "SELECT * FROM tbl_image WHERE image_name = '".$file_name."'";
+        $statement = $connect->prepare($query);
+        $statement->execute();
+        $number_of_rows = $statement->rowCount();
+        if($number_of_rows > 0)
+        {
+        return true;
+        }
+        else
+        {
+        return false;
+        }
 }
 
 ?>

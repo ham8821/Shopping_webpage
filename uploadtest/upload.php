@@ -32,11 +32,19 @@
     // $newpost_result = mysqli_query($conn, $newpost_sql);
 
     if ($conn->query($newpost_sql) === TRUE) {
-        echo "inserted successfully";
+       
+        echo '<script language="javascript">';
+        echo 'alert("your product is now on the web page!")';
+        echo '</script>';
+       header("Location: ../addProduct/myproduct.php");
+        // echo 'your product is now on the web page!';
+        // location('../addProduct/myproduct.php');
     } else {
-        echo "Error: " . $newpost_sql . "<br>" . $conn->error;
+        echo '<script language="javascript">';
+        echo 'alert("Oops, something went wrong. please try again!")';
+        echo '</script>';
     }
-    echo "<br>$productName - $subcategoryid - $price - $quantity";
+   // echo "<br>$productName - $subcategoryid - $price - $quantity";
     
 ?> 
            
