@@ -1,7 +1,7 @@
 <?php
     session_start();
 //upload img here
-    $target_dir = 'tmp/';
+    $target_dir = '../tmp/';
     if( isset($_POST['submit'])) {
         $total_files = count($_FILES['file']['name']);
         for($x = 0; $x < $total_files; $x++) {
@@ -28,7 +28,7 @@
     $quantity = $_POST['quantity'];
     $imgsrc = basename($_FILES['file']['name'][0]);
 
-    $newpost_sql = "INSERT INTO `products`(`postDate`, `productName`, `sellerID`, `subcategoryID`, `Price`, `quantity`,  `imgSRC`) VALUES (now(),'$productName',$sellerid,$subcategoryid,$price,$quantity,$imgsrc)";
+    $newpost_sql = "INSERT INTO `products`(`postDate`, `productName`, `sellerID`, `subcategoryID`, `Price`, `quantity`,  `imgSRC`) VALUES (now(),'$productName',$sellerid,$subcategoryid,$price,$quantity,'$imgsrc')";
     // $newpost_result = mysqli_query($conn, $newpost_sql);
 
     if ($conn->query($newpost_sql) === TRUE) {

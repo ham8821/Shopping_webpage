@@ -191,7 +191,7 @@
 
        // $postID=$_POST['postIDbox'];
         //image of a product
-        $imgpath = '../images/';
+        $imgpath = '../tmp/';
         echo "<div class='image-fluid' style='width: 280px; max-width=270px; height:200px; background-image: url(".$imgpath.$row[$a][1].")'>";
         echo "</div>";
 
