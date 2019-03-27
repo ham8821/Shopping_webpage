@@ -40,7 +40,7 @@
   $_SESSION['lastname']=$lastname;
   $_SESSION['password']=$password;
   $_SESSION['address']=$address;
-  header("location: ../index_loginsuccess.php"); //redirect to home page
+  header("location: ../index.php"); //redirect to home page
     
   
 

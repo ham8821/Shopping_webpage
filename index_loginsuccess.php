@@ -54,6 +54,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="myaccount.php">My account</a>
                       </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="addcartitem/index.php">My Cart</a>
+                      </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="myFunction(); return false">Service hour</a>
                       </li>
@@ -88,7 +91,7 @@
                                             <div class="card-header">
                                             <br>
                                            <div>   <h4>WELCOME <?php echo $_SESSION['email'] ?> </h4></div>
-                                             <button type="button" class="btn btn-brown" id="logoutbutton"><a href="logout.php"> LOG OUT</a></button>
+                                             <button type="button" class="btn btn-brown" id="logoutbutton"><a href="index.php"> LOG OUT</a></button>
 
                                               <div class="d-flex justify-content-end social_icon">
                                     

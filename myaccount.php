@@ -238,8 +238,7 @@
                                     <div><label for="address">New Address</label></div>
                                     <div>
                                     <input type="address" name="newaddress" id="newaddress" class="input-field2" required></div>
-                                    
-                                    <br>
+                                                                        <br>
                                     <button type="button" name="update-address" id="update-address" value="UPDATE" class="form-submit-button" onclick="updateaddress();" class="btn  purple-gradient btn-lg btn-block">OK</button>
                                     </form>	
                                         </div>

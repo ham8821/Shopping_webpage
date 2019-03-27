@@ -165,7 +165,7 @@
             <span><img src="../images/upload.png" style width="30px" height="30px" alt="" class="uploadeicon"></span>
             <span><button type="button" id="postbuttonbox" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="
     margin: 15px; background-color: rgba(45, 147, 108, 1); border: none; margin-left:0;">
-            Post Here
+            Upload Product
           </button></span></center>
           <br><br>
           <div class="container">
