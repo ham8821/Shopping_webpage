@@ -22,7 +22,12 @@
     
   $sql="INSERT INTO user(firstName, lastName, password, address, email) values ('$firstname','$lastname','$password','$address','$email')"; 
  
-  mysqli_query($db,$sql);
+ $result= mysqli_query($db,$sql);
+ $_SESSION['email']=$email;
+ $_SESSION['firstname']=$firstname;
+ $_SESSION['lastname']=$lastname;
+ $_SESSION['password']=$password;
+ $_SESSION['address']=$address;
  /*  $result=mysqli_multi_query($db,$sql);
   if($result){
         do{
@@ -34,14 +39,18 @@
    $sql2="INSERT INTO usercc('userID','Ccnumber','Vdate','Nameoncard','CVV') VALUES ('$readSql','$Ccnumber','$vdate','$cardholder','$cvv')";
    mysqli_query($db,$sql2);
    */
-  $_SESSION['message']= "Done!";
-  $_SESSION['email']=$email;
-  $_SESSION['firstname']=$firstname;
-  $_SESSION['lastname']=$lastname;
-  $_SESSION['password']=$password;
-  $_SESSION['address']=$address;
-  header("location: ../index.php"); //redirect to home page
-    
+    if($result===true){
+      echo "<script type='text/javascript'>alert('Thanks you! Now you can log in to explore our website!');
+      window.location='../index.php';
+      </script>";
+     
+    }
+    else{
+      echo "<script type='text/javascript'>alert('Oops, You failed to register. please contact us for help.');
+      window.location='../index.php';
+      </script>";
+    }
+
   
 
 

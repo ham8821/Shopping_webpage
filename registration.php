@@ -37,32 +37,34 @@
                <h3 style="text-align:center">Join us</h3>
                <div class="row">
                  <div class="col-6">
+                 <br><br>
                 <label>
                     <p class="label-txt">ENTER YOUR FIRST NAME <span class="required">*</span></p>
-                    <input type="text" class="input" value="diego" required="required" name="firstname">
+                    <input type="text" class="input" value="" required="required" name="firstname">
                     <div class="line-box">
                       <div class="line"></div>
                     </div>
                   </label>
                   <label>
                     <p class="label-txt">ENTER YOUR LAST NAME <span class="required">*</span></p>
-                    <input type="text" class="input" value="evang"required="required" name="lastname">
+                    <input type="text" class="input" value=""required="required" name="lastname">
                     <div class="line-box">
                       <div class="line"></div>
                     </div>
                   </label>
                 <label>
                   <p class="label-txt">ENTER YOUR EMAIL <span class="required">*</span></p>
-                  <input type="email" class="input" value="diego@gmail.com" required="required" name="email">
+                  <input type="email" class="input" value="" required="required" name="email">
                   <div class="line-box">
                     <div class="line"></div>
                   </div>
                 </label>
                 </div>
                 <div class="col-6">
+                <br><br>
                 <label>
                   <p class="label-txt">ENTER YOUR PASSWORD <span class="required">*</span></p>
-                  <input type="password" class="input" value="111" required="required" name="password">
+                  <input type="password" class="input" value="" required="required" name="password">
                   <div class="line-box">
                     <div class="line"></div>
                   </div>
@@ -70,7 +72,7 @@
             
                 <label>
                     <p class="label-txt">ENTER YOUR ADDRESS <span class="required">*</span></p>
-                    <input type="address" class="input"  value="111" required="required" name="address">
+                    <input type="address" class="input"  value="" required="required" name="address">
                     <div class="line-box">
                       <div class="line"></div>
                     </div>

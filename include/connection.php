@@ -43,6 +43,15 @@ $password= filter_input(INPUT_POST,'password');
                                 echo "$useremail.$address.$firstName.$lastName.$userID";
                                 header('Location: ../index_loginsuccess.php');
                             }
+                            else{
+                                echo '<script language="javascript">';
+                                echo 'alert("Your email or password is not valid. Please check again.")';
+                                echo '</script>';
+                                // header('Location: ../index.php');
+                                echo '<script type="text/javascript">' . "\n";
+                                echo 'window.location="../index.php";';
+                                echo '</script>';
+                            }
                         }
         }                           
         else{
