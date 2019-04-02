@@ -28,28 +28,41 @@
  $_SESSION['lastname']=$lastname;
  $_SESSION['password']=$password;
  $_SESSION['address']=$address;
- /*  $result=mysqli_multi_query($db,$sql);
-  if($result){
-        do{
-          if(($result=mysqli_sotre_result()))
-        }
-  }
-   
-   $readSql="SELECT userID FROM user where email =$email"
-   $sql2="INSERT INTO usercc('userID','Ccnumber','Vdate','Nameoncard','CVV') VALUES ('$readSql','$Ccnumber','$vdate','$cardholder','$cvv')";
-   mysqli_query($db,$sql2);
-   */
-    if($result===true){
-      echo "<script type='text/javascript'>alert('Thanks you! Now you can log in to explore our website!');
-      window.location='../index.php';
-      </script>";
-     
-    }
-    else{
-      echo "<script type='text/javascript'>alert('Oops, You failed to register. please contact us for help.');
-      window.location='../index.php';
-      </script>";
-    }
+
+
+
+            if($result===true){
+              // echo "<script type='text/javascript'>alert('Thanks you! Now you can log in to explore our website!');
+              // window.location='../index.php';
+              // </script>";
+                $query="SELECT * FROM user WHERE email='$email'";
+                // $res= mysqli_query($db,$query);
+                // $row=mysqli_fetch_all($res, MYSQLI_ASSOC);
+                // $userID=$row[0];
+                 
+                   $res= mysqli_query($db,$query);             
+                while($row = mysqli_fetch_all($res)) {
+
+                  $userID=$row[0][0];
+
+                  $qr="INSERT INTO mycart(buyerID) VALUES($userID)";
+                  $r= mysqli_query($db,$qr);
+                  if($r===true){
+                    echo "<script type='text/javascript'>alert('Thanks you! Now you can log in to explore our website!');
+                    window.location='../index.php';
+                    </script>";      
+                  }
+                
+                }
+
+
+              
+            }
+            else{
+              echo "<script type='text/javascript'>alert('Oops, You failed to register. please contact us for help.');
+              window.location='../index.php';
+              </script>";
+            }
 
   
 

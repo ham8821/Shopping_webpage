@@ -57,7 +57,7 @@
 			</div>
 			<div class="row">
 				<div class="formbox col-sm-12 col-lg-12">
-					<form name="frmForgot" id="frmForgot" method="post" onSubmit="return validate_password_reset();">
+					<form name="frmForgot" id="frmForgot" method="post" onsubmit="return validate_password_reset();">
 					<?php if(!empty($success_message)) { ?>
 					<div class="success_message"><?php echo $success_message; ?></div>
 					<?php } ?>

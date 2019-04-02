@@ -90,7 +90,7 @@
                                           <div class="card">
                                             <div class="card-header">
                                             <br>
-                                           <div>   <h4>WELCOME <?php echo $_SESSION['email'] ?> </h4></div>
+                                           <div>   <h5>WELCOME <?php echo $_SESSION['email'] ?> !</h5></div>
                                              <button type="button" class="btn btn-brown" id="logoutbutton"><a href="index.php"> LOG OUT</a></button>
 
                                               <div class="d-flex justify-content-end social_icon">

@@ -196,7 +196,7 @@
                                          
                                       <div>                              
                                          
-                                          <button style:="" background-color="grey" type="button" name="Addcreditcard" id="Addcreditcard" class="form-submit-button" onclick="addcreditcard1();">OK</button>
+                                          <button style="" background-color="grey" type="button" name="Addcreditcard" id="Addcreditcard" class="form-submit-button" onclick="addcreditcard1();">OK</button>
                                       </div>
                                   </form>
                                   </div>

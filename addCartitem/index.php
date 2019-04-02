@@ -240,7 +240,7 @@
                                         </div></span>
                                         <label>
                                              I accept the terms of service.
-                                             <input type="checkbox" name="terms_of_service" required value="Y">;
+                                             <input type="checkbox" name="terms_of_service" required value="Y">
                                         </label>
 
                                    </form>
